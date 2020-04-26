@@ -17,5 +17,7 @@ namespace HomeWildLearn.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }
+
+        public System.Data.Entity.DbSet<HomeWildLearn.Models.wildlife_locations> wildlife_locations { get; set; }
     }
 }

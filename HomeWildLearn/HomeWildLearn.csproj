@@ -199,6 +199,7 @@
     <Compile Include="Controllers\AnimalsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\wildlife_locationsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,6 +211,8 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\SendEmailViewModel.cs" />
+    <Compile Include="Models\WildlifeLocationModel.cs" />
+    <Compile Include="Models\wildlife_locations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utils\EmailSender.cs" />
@@ -239,12 +242,15 @@
     <Content Include="Content\images\animals\echidna.jpg" />
     <Content Include="Content\images\animals\emu.jpg" />
     <Content Include="Content\images\animals\jellyfish.jpg" />
+    <Content Include="Content\images\animals\kangaroo.jpg" />
     <Content Include="Content\images\animals\Koala_demo_details.jpg" />
     <Content Include="Content\images\animals\koka.jpg" />
     <Content Include="Content\images\animals\plat.jpg" />
+    <Content Include="Content\images\animals\Quokka.jpg" />
     <Content Include="Content\images\animals\spider.jpg" />
     <Content Include="Content\images\animals\taipan.jpg" />
     <Content Include="Content\images\animals\wombat.jpg" />
+    <Content Include="Content\images\animals\zoo.jpeg" />
     <Content Include="Content\images\boys.jpg" />
     <Content Include="Content\images\camp1.jpg" />
     <Content Include="Content\images\fact1.png" />
@@ -308,6 +314,7 @@
     <Content Include="Content\kid.jpg" />
     <Content Include="Content\kids.jpg" />
     <Content Include="Content\kidstudy.jpg" />
+    <Content Include="Content\koala[1].mp3" />
     <Content Include="Content\landscape.jpg" />
     <Content Include="Content\learn.jpg" />
     <Content Include="Content\lose.gif" />
@@ -612,6 +619,11 @@
     <Content Include="Views\Animals1\Details.cshtml" />
     <Content Include="Views\Animals1\Edit.cshtml" />
     <Content Include="Views\Animals1\Index.cshtml" />
+    <Content Include="Views\wildlife_locations\Create.cshtml" />
+    <Content Include="Views\wildlife_locations\Delete.cshtml" />
+    <Content Include="Views\wildlife_locations\Details.cshtml" />
+    <Content Include="Views\wildlife_locations\Edit.cshtml" />
+    <Content Include="Views\wildlife_locations\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
