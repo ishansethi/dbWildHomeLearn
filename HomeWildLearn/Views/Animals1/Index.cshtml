@@ -95,8 +95,7 @@
                     <p><a href="#" class="text-yellow">Explore and Search wild life animals</a></p>
                     <p><a href="index.html" class="text-white">Home</a> <span class="mx-0">/</span> <strong>Explore wildlife </strong></p>
                 </div>
-                <a class="ct-btn-scroll ct-js-btn-scroll" href="#sec1"><img alt="Arrow Down Icon" src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"></a>
-            </div>
+                <a class="ct-btn-scroll ct-js-btn-scroll" href="#sec1"><img alt="Arrow Down Icon" src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"  ></a>            </div>
         </div>
     </div>
 </div>
@@ -142,7 +141,7 @@
                     <div class="w-100 d-none d-xl-block">
                     </div>
                     <div class="card card-shadow text-center col-md-3 mb-4" data-class="@Html.DisplayFor(modelItem => item.animal_class)">
-                        <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.animal_explore_image)" alt="Card image cap">                        <div class="card-body">
+                        <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.animal_explore_image)" alt="Card image cap" style="width:215px; height:144px;">                        <div class="card-body">
                             <h4 class="card-title">@Html.DisplayFor(modelItem => item.animal_name)</h4>
                             <p class="card-text animal-type">Type: @Html.DisplayFor(modelItem => item.animal_class)</p>
                             <div class="dropdown-divider"></div>
@@ -150,7 +149,8 @@
                                 <small class="text-muted"></small>
                             </p>
                             <a href="#">
-                                @Html.ActionLink("More About me!", "Details", new { id = item.animal_id }, new { @class = "btn btn-outline-primary" })
+                                @Html.ActionLink("More About me!", "Details", "wildlife_details", new { id = item.animal_id }, new { @class = "btn btn-primary btn-sm" })
+
                             </a>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                 else
                 {
                     <div class="card card-shadow text-center col-md-3 mb-4" data-class="@Html.DisplayFor(modelItem => item.animal_class)" style="width: 18rem;">
-                        <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.animal_explore_image)" alt="Card image cap">
+                        <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.animal_explore_image)" alt="Card image cap" style="width:215px; height:144px;">
                         <div class="card-body">
                             <h4 class="card-title">@Html.DisplayFor(modelItem => item.animal_name)</h4>
                             <p class="card-text animal-type">Type: @Html.DisplayFor(modelItem => item.animal_class)</p>
@@ -168,7 +168,7 @@
                                 <small class="text-muted"></small>
                             </p>
                             <a href="#">
-                                @Html.ActionLink("More About me!", "Details", new { id = item.animal_id }, new { @class = "btn btn-outline-primary" })
+                                @Html.ActionLink("More About me!", "Details", "wildlife_details", new { id = item.animal_id }, new { @class = "btn btn-primary btn-sm" })
                             </a>
                         </div>
                     </div>

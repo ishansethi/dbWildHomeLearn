@@ -120,6 +120,146 @@
     </div>
 </div>
 
+
+<div class="site-section bg-warning">
+    <div class="container">
+        <div class="row mb-5">
+            <div>
+                Enter location name:
+                <input id="awxSearchTextBox" placeholder="new york, ny" />
+                <input id="awxSearchButton" type="submit" value="Search" />
+            </div>
+            <h3>Location Information</h3>
+            <ul>
+                <li>URL: <span id="awxLocationUrl" />N/A
+                <li><span id="awxLocationInfo">(Location information will be displayed here)</span>
+            </ul>
+            <h3>Current Conditions</h3>
+            <ul>
+                <li>URL: <span id="awxWeatherUrl" />N/A
+                <li><span id="awxWeatherInfo">(Current conditions will be displayed here)</span>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    // Configure our weather widget during jQuery.OnReady
+    $(function () {
+        var isMetric = false;
+        var locationUrl = "";
+        var currentConditionsUrl = "";
+        var language = "en";
+
+        var apiKey = "hoArfRosT1215";
+        var awxClearMessages = function () {
+            $("#awxLocationInfo").html("...");
+            $("#awxLocationUrl").html("...");
+            $("#awxWeatherInfo").html("...");
+            $("#awxWeatherUrl").html("...");
+        }
+
+        var awxCityLookUp = function (freeText) {
+            awxClearMessages();
+            locationUrl = "https://apidev.accuweather.com/locations/v1/search?q=" + freeText + "&apikey=" + apiKey;
+            $.ajax({
+                type: "GET",
+                url: locationUrl,
+                dataType: "jsonp",
+                cache: true,                    // Use cache for better reponse times
+                jsonpCallback: "awxCallback",   // Prevent unique callback name for better reponse times
+                success: function (data) { awxCityLookUpFound(data); }
+            });
+        };
+        // Displays what location(s) were found.
+        var awxCityLookUpFound = function (data) {
+            var msg, locationKey = null;
+            $("#awxLocationUrl").html("<a href=" + encodeURI(locationUrl) + ">" + locationUrl + "</a>");
+            if (data.length == 1) {
+                locationKey = data[0].Key;
+                msg = "One location found: <b>" + data[0].LocalizedName + "</b>. Key: " + locationKey;
+            }
+            else if (data.length == 0) {
+                msg = "No locations found."
+            }
+            else {
+                locationKey = data[0].Key;
+                msg = "Multiple locations found (" + data.length + "). Selecting the first one: " +
+                    "<b>" + data[0].LocalizedName + ", " + data[0].Country.ID + "</b>. Key: " + locationKey;
+            }
+            $("#awxLocationInfo").html(msg);
+            if (locationKey != null) {
+                awxGetCurrentConditions(locationKey);
+            }
+
+        };
+        // Gets current conditions for the location.
+        // For more info about Current Conditions API go to http://apidev.accuweather.com/developers/locations
+        var awxGetCurrentConditions = function (locationKey) {
+            currentConditionsUrl = "https://apidev.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=" + language + "&apikey=" + apiKey;
+            $.ajax({
+                type: "GET",
+                url: currentConditionsUrl,
+                dataType: "jsonp",
+                cache: true,                    // Use cache for better reponse times
+                jsonpCallback: "awxCallback",   // Prevent unique callback name for better reponse times
+                success: function (data) {
+                    var html;
+                    if (data && data.length > 0) {
+                        var conditions = data[0];
+                        var temp = isMetric ? conditions.Temperature.Metric : conditions.Temperature.Imperial;
+                        html = conditions.WeatherText + ", " + temp.Value + " " + temp.Unit;
+                    }
+                    else {
+                        html = "N/A";
+                    }
+                    $("#awxWeatherInfo").html(html);
+                    $("#awxWeatherUrl").html("<a href=" + currentConditionsUrl + ">" + currentConditionsUrl + "</a>");
+                }
+            });
+        };
+        $("#awxSearchTextBox").keypress(function (e) {
+            if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+                var text = $("#awxSearchTextBox").val();
+                awxCityLookUp(text);
+                return false;
+            } else {
+                return true;
+            }
+        });
+        $("#awxSearchButton").click(function () {
+            var text = $("#awxSearchTextBox").val();
+            awxCityLookUp(text);
+        });
+    });
+</script>
+
+
+<div>
+    Enter location name:
+    <input id="awxSearchTextBox" placeholder="new york, ny" />
+    <input id="awxSearchButton" type="submit" value="Search" />
+</div>
+<h3>Location Information</h3>
+<ul>
+    <li>URL: <span id="awxLocationUrl" />N/A
+    <li><span id="awxLocationInfo">(Location information will be displayed here)</span>
+</ul>
+<h3>Current Conditions</h3>
+<ul>
+    <li>URL: <span id="awxWeatherUrl" />N/A
+    <li><span id="awxWeatherInfo">(Current conditions will be displayed here)</span>
+</ul>
+
+
+
+
+
+
+
 <div id="panel"></div>
 
 <!-- Map appears here -->
@@ -253,9 +393,11 @@
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             let placeInfowindow = new google.maps.InfoWindow();
             let rating = "None";
+            let formatted_address = "None";
             if (placeResult.rating) rating = placeResult.rating;
+            if (placeResult.formatted_address) formatted_address = placeResult.formatted_address;
             placeInfowindow.setContent('<div><strong>' + placeResult.name +
-                '</strong><br>' + 'Rating: ' + rating + '</div>');
+                '</strong><br>' + 'Rating: ' + rating + '<br>' + 'Address' + formatted_address + '</div>');
             placeInfowindow.open(marker.map, marker);
             currentInfoWindow.close();
             currentInfoWindow = placeInfowindow;
@@ -287,6 +429,7 @@
             photo.src = firstPhoto.getUrl();
             infoPane.appendChild(photo);
         }
+
 
         // Add place details with text formatting
         let name = document.createElement('h1');

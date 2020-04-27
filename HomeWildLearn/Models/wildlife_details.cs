@@ -12,7 +12,9 @@ namespace HomeWildLearn.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Animal_id { get; set; }
 
+        [ForeignKey("Animal_id")]
         public virtual Animal Animal { get; set; }
+
 
         [Required]
         public string Fact_1 { get; set; }
