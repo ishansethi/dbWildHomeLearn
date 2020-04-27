@@ -67,7 +67,7 @@
         <!-- /.col-lg-8 -->
         <div class="col-lg-5">
             <h1 class="font-weight-light">@Html.DisplayFor(model => model.animal_name)</h1>
-            <p>The koala is a small, furry animal of eastern Australia. It is sometimes called a “bear” because it looks like a living teddy bear. But the koala is not really a bear. It belongs to the group of animals called marsupials, which carry their young in a pouch. </p>
+            <p>@Html.DisplayFor(model => model.animal_desc)</p>
             <div class="row">
                 <div class="col-md-6">
                     <a class="btn btn-primary btn-space btn-sm mr-1 btn-block" " href="#">Picture Gallery</a>
@@ -95,7 +95,7 @@
                     <p class="card-text">A koala can live to about 15 years of age in the wild.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary btn-sm">More Info</a>
+                    <a href="@Url.Action("InterestingFacts", "Home")" class="btn btn-primary btn-sm">More Info</a>
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@
                     <p class="card-text">A koala's main source of food is Eucalyptus leaves!</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary btn-sm">More Info</a>
+                    <a href="@Url.Action("InterestingFacts", "Home")" class="btn btn-primary btn-sm">More Info</a>
                 </div>
             </div>
         </div>
@@ -136,7 +136,7 @@
                     <p class="card-text">Maybe you can find one in your backyard!</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary btn-sm">Find @Html.DisplayFor(model => model.animal_name)s</a>
+                    <a href="@Url.Action("Index", "wildlife_locations")" class="btn btn-primary btn-sm">Find @Html.DisplayFor(model => model.animal_name)s</a>
                 </div>
             </div>
         </div>

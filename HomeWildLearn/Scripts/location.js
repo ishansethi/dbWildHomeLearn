@@ -9,7 +9,7 @@ var currentMarkers = [];
 // The first step is obtain all the latitude and longitude from the HTML
 // The below is a simple jQuery selector
 
-$('#animalFilter li a').on('click', function () {
+$('#animalFilter a').on('click', function () {
     selectedAnimal = $(this).html();
     refreshMap();
 });

@@ -15,5 +15,13 @@ namespace HomeWildLearn.Models
         [Required]
         [StringLength(50)]
         public string animal_name { get; set; }
+
+        [StringLength(50)]
+        public string animal_class { get; set; }
+
+        public string animal_desc { get; set; }
+
+
+        public string animal_explore_image { get; set; }
     }
 }
