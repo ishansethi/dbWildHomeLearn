@@ -67,7 +67,7 @@
                                     <a class="dropdown-item" href="@Url.Action("Index", "Animals1" )">Explore Wild-Animals</a>
                                     
                                     <a class="dropdown-item" href="@Url.Action("InterestingFacts", "Home" )">Interesting Facts</a>
-                                    <a class="dropdown-item" href="@Url.Action("WhereTo", "Home" )">"Where to go now? Zoo, forest or park?</a>
+                                    <a class="dropdown-item" href="@Url.Action("WhereTo", "Home" )">Where to go now? Zoo, forest or park?</a>
                                     
                                 </div>
                             </li>
@@ -120,7 +120,13 @@
                 </div>
             </footer>
         </div>
+    <script language="javascript">
+        // XSS attack code prevention by TIM
+            <!--
+        if (self != top)
+            -->
 
+    </script>
         <script src="~/Scripts/jquery-3.3.1.min.js"></script>
         <script src="~/Scripts/jquery-migrate-3.0.0.js"></script>
         <script src="~/Scripts/popper.min.js"></script>

@@ -103,7 +103,7 @@
                 <div class="col-md-5 mt-5 pt-5">
                     <span class="text-cursive h2 text-red">Welcome To Wild-HomeLearn</span>
                     <p><a href="#" class="text-yellow">Looking for zoo's, parks or wildlife areas? </a></p>
-                    <p><a href="index.html" class="text-white">Home</a> <span class="mx-0">/</span> <strong>Whats near me?</strong></p>
+                    <p><a href="#" class="text-white">Home</a> <span class="mx-0">/</span> <strong>Whats near me?</strong></p>
                 </div>
                 <a class="ct-btn-scroll ct-js-btn-scroll" href="#sec1"><img alt="Arrow Down Icon" src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"></a>
             </div>
@@ -114,34 +114,16 @@
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 text-center">
-                <span class="text-cursive h5 text-red d-block">Here are your nearby WildLife Parks where you all can go and EXPLORE!!</span>
+                <span class="text-cursive h2 text-white d-block">Here are your nearby WildLife Parks where you all can go and EXPLORE!!  </span>
+                <span class="text-cursive h2 text-white d-block">Click on the RED Marker Below  </span>
+
             </div>
         </div>
     </div>
 </div>
 
 
-<div class="site-section bg-warning">
-    <div class="container">
-        <div class="row mb-5">
-            <div>
-                Enter location name:
-                <input id="awxSearchTextBox" placeholder="new york, ny" />
-                <input id="awxSearchButton" type="submit" value="Search" />
-            </div>
-            <h3>Location Information</h3>
-            <ul>
-                <li>URL: <span id="awxLocationUrl" />N/A
-                <li><span id="awxLocationInfo">(Location information will be displayed here)</span>
-            </ul>
-            <h3>Current Conditions</h3>
-            <ul>
-                <li>URL: <span id="awxWeatherUrl" />N/A
-                <li><span id="awxWeatherInfo">(Current conditions will be displayed here)</span>
-            </ul>
-        </div>
-    </div>
-</div>
+
 
 
 
@@ -238,32 +220,32 @@
 </script>
 
 
-<div>
-    Enter location name:
-    <input id="awxSearchTextBox" placeholder="new york, ny" />
-    <input id="awxSearchButton" type="submit" value="Search" />
-</div>
-<h3>Location Information</h3>
-<ul>
-    <li>URL: <span id="awxLocationUrl" />N/A
-    <li><span id="awxLocationInfo">(Location information will be displayed here)</span>
-</ul>
-<h3>Current Conditions</h3>
-<ul>
-    <li>URL: <span id="awxWeatherUrl" />N/A
-    <li><span id="awxWeatherInfo">(Current conditions will be displayed here)</span>
-</ul>
-
-
-
-
-
-
-
 <div id="panel"></div>
 
 <!-- Map appears here -->
 <div id="map"></div>
+
+
+<div class="site-section bg-warning">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <span class="text-cursive h2 text-white d-block">Here are your weather details...Just type the desired place.</span>
+                <br />
+            </div>
+            <div>
+                <h3>Enter location name:</h3>
+                <input id="awxSearchTextBox" placeholder="st Kilda" />
+                <input id="awxSearchButton" class="btn-danger" type="submit" value="Search" />
+            </div>
+            <hr>
+            <h3>Current Conditions</h3>
+            <ul>
+                <li><span id="awxWeatherInfo"></span>
+            </ul>
+        </div>
+    </div>
+</div>
 
 <script>
     /* Note: This example requires that you consent to location sharing when

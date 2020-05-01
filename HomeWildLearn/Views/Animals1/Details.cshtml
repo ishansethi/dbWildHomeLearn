@@ -36,6 +36,10 @@
     </div>
 </div>
 
+<div>
+    <button type="button" onclick="location.href='@Url.Action("ExportPDF","Animals", new {id = "id"}).Replace("id", Model.animal_id.ToString())'" class="btn btn-secondary" align="center">Download page</button>
+</div>
+
 <!-- Page Content -->
 <div class="container mt-3">
     <!-- Heading Row -->
@@ -72,9 +76,7 @@
                 <div class="col-md-6">
                     <a class="btn btn-primary btn-space btn-sm mr-1 btn-block" " href="#">Picture Gallery</a>
                 </div>
-                <div class="col-md-6">
-                    <button type="button" onclick="location.href='@Url.Action("ExportPDF","Animals", new {id = "id"}).Replace("id", Model.animal_id.ToString())'" class="btn btn-secondary" align="center">Download page</button>
-                </div>
+
             </div>
         </div>
         <!-- /.col-md-4 -->

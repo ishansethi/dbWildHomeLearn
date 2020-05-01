@@ -8,109 +8,8 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<style>
-    body {
-        font-family: Arial;
-        margin: 0;
-    }
+<link href="~/css/details.css" rel="stylesheet">
 
-    * {
-        box-sizing: border-box;
-    }
-
-    img {
-        vertical-align: middle;
-    }
-
-    /* Position the image container (needed to position the left and right arrows) */
-    .container {
-        position: relative;
-    }
-
-    /* Hide the images by default */
-    .mySlides {
-        display: none;
-    }
-
-    /* Add a pointer when hovering over the thumbnail images */
-    .cursor {
-        cursor: pointer;
-    }
-
-    /* Next & previous buttons */
-    .prev,
-    .next {
-        cursor: pointer;
-        position: absolute;
-        top: 40%;
-        width: auto;
-        padding: 16px;
-        margin-top: -50px;
-        color: white;
-        font-weight: bold;
-        font-size: 20px;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        -webkit-user-select: none;
-    }
-
-    /* Position the "next button" to the right */
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-
-        /* On hover, add a black background color with a little bit see-through */
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-    /* Number text (1/3 etc) */
-    .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-    }
-
-    /* Container for image text */
-    .caption-container {
-        text-align: center;
-        background-color: #222;
-        padding: 2px 16px;
-        color: white;
-    }
-
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-    /* Six columns side by side */
-    .column {
-        float: left;
-        width: 16.66%;
-    }
-
-    /* Add a transparency effect for thumnbail images */
-    .demo {
-        opacity: 0.6;
-    }
-
-        .active,
-        .demo:hover {
-            opacity: 1;
-        }
-</style>
-<style>
-
-    .btn-space {
-        margin-right: 0.5rem;
-    }
-</style>
 @*<div>
         <h4>Animal</h4>
         <button type="button" onclick="location.href='@Url.Action("ExportPDF","Animals", new {id = "id"}).Replace("id", Model.animal_id.ToString())'" class="btn btn-primary" align="center">Export as PDF</button>
@@ -140,7 +39,7 @@
     <!-- Heading Row -->
     <div class="row align-items-center my-5">
         <div class="col-lg-7">
-            <img class="img-fluid rounded mb-4 mb-lg-0" src="@Html.DisplayFor(model => model.Animal_Image_Main)" alt="">
+            <img class="img-fluid rounded mb-4 mb-lg-0" src="@Html.DisplayFor(model => model.Animal_Image_Main)" style="width:634.98px; height: 423.15px;" alt="">
         </div>
         <!-- /.col-lg-8 -->
         <div class="col-lg-5">
@@ -149,8 +48,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <a class="btn btn-primary btn-space btn-sm mr-1 btn-block" data-toggle="modal" href="" data-target="#myModal">Picture Gallery</a>
+                    <button type="button" onclick="location.href='@Url.Action("ExportPDF","wildlife_details", new {id = "id"}).Replace("id", Model.Animal.animal_id.ToString())'" class="btn btn-primary btn-space btn-sm mr-1 btn-block">Download page</button>
                     <div class="container">
-                       
+
                         <!-- The Modal -->
                         <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
@@ -225,78 +125,76 @@
                     </div>
                 </div>
 
-                </div>
-                <div class="col-md-6">
-                    <button type="button" onclick="location.href='@Url.Action("ExportPDF","Animals", new {id = "id"}).Replace("id", Model.Animal.animal_id.ToString())'" class="btn btn-secondary" align="center">Download page</button>
-                </div>
             </div>
-        </div>
-        <!-- /.col-md-4 -->
-    </div>
-    <!-- /.row -->
-    <!-- Call to Action Well -->
-    <div class="card text-white bg-secondary my-5 py-0 text-center">
-        <div class="card-body">
-            <p class="text-white m-0">Read fun facts about @Html.DisplayFor(model => model.Animal.animal_name)</p>
+
         </div>
     </div>
-    <!-- Content Row -->
-    <div class="row">
-        <div class="col-md-3 mb-5">
-            <div class="card h-100 bg-teal text-center">
-                <div class="card-body">
-                    <h2 class="card-title">Fact 1</h2>
-                    <p class="card-text">@Html.DisplayFor(model => model.Fact_1)</p>
-                </div>
-                <div class="card-footer">
-                    <a href="@Url.Action("InterestingFacts", "Home")" class="btn btn-primary btn-sm">More Info</a>
-                </div>
-            </div>
-        </div>
-        <!-- /.col-md-4 -->
-        <div class="col-md-3 mb-5">
-            <div class="card h-100 bg-teal text-center">
-                <div class="card-body">
-                    <h2 class="card-title">Fact 2</h2>
-                    <p class="card-text">@Html.DisplayFor(model => model.Fact_2)</p>
-                </div>
-                <div class="card-footer">
-                    <a href="@Url.Action("InterestingFacts", "Home")" class="btn btn-primary btn-sm">More Info</a>
-                </div>
-            </div>
-        </div>
-        <!-- /.col-md-4 -->
-        <div class="col-md-3 mb-5" id="sec2">
-            <div class="card h-100 bg-teal text-center">
-                <div class="card-body">
-                    <h2 class="card-title">Listen to a @Html.DisplayFor(model => model.Animal.animal_name)</h2>
-                    <p class="card-text">Does it roar?</p>
-                </div>
-                <div class="card-footer">
-                    <audio id="nyan" src= "@Html.DisplayFor(model => model.Animal_Sound)" preload="metadata" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                    <a href="#sec2" class="btn btn-primary btn-sm" id="nyan-btn">
-                        Make Sound <i class="fa fa-play"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- /.col-md-4 -->
-        <div class="col-md-3 mb-5">
-            <div class="card h-100 bg-teal text-center">
-                <div class="card-body">
-                    <h2 class="card-title">Location Card</h2>
-                    <p class="card-text">Maybe you can find one in your backyard!</p>
-                </div>
-                <div class="card-footer">
-                    @Html.ActionLink("Find " + @Html.DisplayFor(model => model.Animal.animal_name) + "s", "IndividualLocation", "wildlife_locations", new { animalName = Model.Animal.animal_name }, new { @class = "btn btn-primary btn-sm" })
-                </div>
-            </div>
-        </div>
-        <!-- /.col-md-4 -->
+    <!-- /.col-md-4 -->
+</div>
+<!-- /.row -->
+<!-- Call to Action Well -->
+<div class="card text-white bg-secondary my-5 py-0 text-center">
+    <div class="card-body">
+        <p class="text-white m-0">Read fun facts about @Html.DisplayFor(model => model.Animal.animal_name)</p>
     </div>
-    <!-- /.row -->
+</div>
+<!-- Content Row -->
+<div class="row">
+    <div class="col-md-3 mb-5">
+        <div class="card h-100 bg-teal text-center">
+            <div class="card-body">
+                <h2 class="card-title">Fact 1</h2>
+                <p class="card-text">@Html.DisplayFor(model => model.Fact_1)</p>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-primary btn-sm" disable>More Info</a>
+            </div>
+        </div>
+    </div>
+    <!-- /.col-md-4 -->
+    <div class="col-md-3 mb-5">
+        <div class="card h-100 bg-teal text-center">
+            <div class="card-body">
+                <h2 class="card-title">Fact 2</h2>
+                <p class="card-text">@Html.DisplayFor(model => model.Fact_2)</p>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-primary btn-sm" disable>More Info</a>
+            </div>
+        </div>
+    </div>
+    <!-- /.col-md-4 -->
+    <div class="col-md-3 mb-5" id="sec2">
+        <div class="card h-100 bg-teal text-center">
+            <div class="card-body">
+                <h2 class="card-title">Listen to a @Html.DisplayFor(model => model.Animal.animal_name)</h2>
+                <p class="card-text">Does it roar?</p>
+            </div>
+            <div class="card-footer">
+                <audio id="nyan" src="@Html.DisplayFor(model => model.Animal_Sound)" preload="metadata" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <a href="#sec2" class="btn btn-primary btn-sm" id="nyan-btn">
+                    Make Sound <i class="fa fa-play"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /.col-md-4 -->
+    <div class="col-md-3 mb-5">
+        <div class="card h-100 bg-teal text-center">
+            <div class="card-body">
+                <h2 class="card-title">Location Card</h2>
+                <p class="card-text">Maybe you can find one in your backyard!</p>
+            </div>
+            <div class="card-footer">
+                @Html.ActionLink("Find " + @Html.DisplayFor(model => model.Animal.animal_name) + "s", "IndividualLocation", "wildlife_locations", new { animalName = Model.Animal.animal_name }, new { @class = "btn btn-primary btn-sm" })
+            </div>
+        </div>
+    </div>
+    <!-- /.col-md-4 -->
+</div>
+<!-- /.row -->
 </div>
 <!-- /.container -->
 <script>

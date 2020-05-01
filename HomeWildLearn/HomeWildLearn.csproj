@@ -383,6 +383,7 @@
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\details.css" />
     <Content Include="css\modern-business.css" />
     <Content Include="css\quiz.css" />
     <Content Include="favicon.ico" />
