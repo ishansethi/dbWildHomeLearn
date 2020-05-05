@@ -70,6 +70,13 @@ namespace HomeWildLearn.Controllers
             return View();
         }
 
+        public ActionResult KidsAware()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
         public ActionResult AnimalsAroundMe()
         {
             ViewBag.Message = "Your application description page.";

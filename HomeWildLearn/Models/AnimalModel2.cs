@@ -21,5 +21,7 @@ namespace HomeWildLearn.Models
         public System.Data.Entity.DbSet<HomeWildLearn.Models.wildlife_locations> wildlife_locations { get; set; }
 
         public System.Data.Entity.DbSet<HomeWildLearn.Models.wildlife_details> wildlife_details { get; set; }
+
+        public System.Data.Entity.DbSet<HomeWildLearn.Models.Blog> Blogs { get; set; }
     }
 }

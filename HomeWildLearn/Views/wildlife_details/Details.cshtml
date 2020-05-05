@@ -9,6 +9,158 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <link href="~/css/details.css" rel="stylesheet">
+<style>
+
+
+.buttons {
+	margin-top: 25px;
+}
+
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	height: 48px;
+	outline: none;
+	padding: 0;
+	width: 48px;
+}
+
+#play {
+	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play.svg);
+}
+
+#play.played {
+	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play1.svg);
+}
+
+#pause {
+	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause.svg);
+}
+
+#pause.paused {
+	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause1.svg);
+}
+
+#stop {
+	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop.svg);
+}
+
+#stop.stopped {
+	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop1.svg);
+}
+
+.media (max-width: 700px) {
+	html {
+		font-size: 14pt;
+	}
+	article {
+		width: 90%;
+	}
+}
+
+
+
+/*  demo decor */
+
+#-demo-title {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 36px;
+	background-color: #D5FFD1;
+	color: #0F316C;
+	line-height: 36px;
+	font-weight: bold;
+	font-size: 16pt;
+	text-align: center;
+}
+
+#-demo-profile {
+	float: left;
+	height: 100%;
+	opacity: .4;
+}
+
+#-demo-profile:hover {
+	opacity: 1;
+}
+
+.media (max-width: 400px) {
+	#-demo-title {
+		font-size: 12pt;
+	}
+}
+
+</style>
+<script>
+    onload = function () {
+        if ('speechSynthesis' in window) with (speechSynthesis) {
+
+            var playEle = document.querySelector('#play');
+            var pauseEle = document.querySelector('#pause');
+            var stopEle = document.querySelector('#stop');
+            var flag = false;
+
+            playEle.addEventListener('click', onClickPlay);
+            pauseEle.addEventListener('click', onClickPause);
+            stopEle.addEventListener('click', onClickStop);
+
+            function onClickPlay() {
+                if (!flag) {
+                    flag = true;
+                    utterance = new SpeechSynthesisUtterance(document.querySelector('article').textContent);
+                    utterance.voice = getVoices()[0];
+                    utterance.onend = function () {
+                        flag = false;
+                        playEle.className = pauseEle.className = '';
+                        stopEle.className = 'stopped';
+                    };
+                    playEle.className = 'played';
+                    stopEle.className = '';
+                    speak(utterance);
+                }
+                if (paused) { /* unpause/resume narration */
+                    playEle.className = 'played';
+                    pauseEle.className = '';
+                    resume();
+                }
+            }
+
+            function onClickPause() {
+                if (speaking && !paused) { /* pause narration */
+                    pauseEle.className = 'paused';
+                    playEle.className = '';
+                    pause();
+                }
+            }
+
+            function onClickStop() {
+                if (speaking) { /* stop narration */
+                    /* for safari */
+                    stopEle.className = 'stopped';
+                    playEle.className = pauseEle.className = '';
+                    flag = false;
+                    cancel();
+
+                }
+            }
+
+        }
+
+        else { /* speech synthesis not supported */
+            msg = document.createElement('h5');
+            msg.textContent = "Detected no support for Speech Synthesis";
+            msg.style.textAlign = 'center';
+            msg.style.backgroundColor = 'red';
+            msg.style.color = 'white';
+            msg.style.marginTop = msg.style.marginBottom = 0;
+            document.body.insertBefore(msg, document.querySelector('div'));
+        }
+
+    }
+</script>
+
 
 @*<div>
         <h4>Animal</h4>
@@ -29,12 +181,19 @@
         @Html.ActionLink("Back to List", "Index")
     </p>*@
 <!-- Background image to take up space -->
+
+
+
+
 <div class="ftco-blocks-cover-1">
     <div class="site-section overlay" data-stellar-background-ratio="0.5" style="background-image: url('/Content/images/koalas.jpg')">
     </div>
 </div>
 
 <!-- Page Content -->
+
+
+
 <div class="container mt-3">
     <!-- Heading Row -->
     <div class="row align-items-center my-5">
@@ -43,8 +202,16 @@
         </div>
         <!-- /.col-lg-8 -->
         <div class="col-lg-5">
-            <h1 class="font-weight-light">@Html.DisplayFor(model => model.Animal.animal_name)</h1>
-            <p>@Html.DisplayFor(model => model.Animal.animal_desc)</p>
+
+            <article>
+                <h1 class="font-weight-light">@Html.DisplayFor(model => model.Animal.animal_name)</h1>
+                <div class=buttons>
+                    <button id=play></button> &nbsp;
+                    <button id=pause></button> &nbsp;
+                    <button id=stop></button>
+                </div>
+                <p>@Html.DisplayFor(model => model.Animal.animal_desc)</p>
+            </article>
             <div class="row">
                 <div class="col-md-6">
                     <a class="btn btn-primary btn-space btn-sm mr-1 btn-block" data-toggle="modal" href="" data-target="#myModal">Picture Gallery</a>
