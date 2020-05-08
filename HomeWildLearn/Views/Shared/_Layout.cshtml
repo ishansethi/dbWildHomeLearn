@@ -62,13 +62,12 @@
                                     Playfield
                                 </a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="@Url.Action("Index", "wildlife_locations" )"><i class="fa fa-globe" aria-hidden="true"></i> Animals Around Me!</a>
-                                    <a class="dropdown-item" href="@Url.Action("TestYourKnowledge", "Home" )"><i class="fa fa-question" aria-hidden="true"></i> Let's Test Your Knowledge</a>
                                     <a class="dropdown-item" href="@Url.Action("Index", "Animals1" )">
                                         <i class="fa fa-binoculars" aria-hidden="true"></i>
                                         Explore Wild-Animals
                                     </a>
-
+                                    <a class="dropdown-item" href="@Url.Action("Index", "wildlife_locations" )"><i class="fa fa-globe" aria-hidden="true"></i> Animals Around Me!</a>
+                                    <a class="dropdown-item" href="@Url.Action("QuizTest", "Home" )"><i class="fa fa-question" aria-hidden="true"></i> Let's Test Your Knowledge</a>
                                     <a class="dropdown-item" href="@Url.Action("InterestingFacts", "Home" )"><i class="fa fa-search" aria-hidden="true"></i> Interesting Facts and Get Aware</a>
                                     <a class="dropdown-item" href="@Url.Action("WhereTo", "Home" )"><i class="fa fa-tree" aria-hidden="true"></i> Where to go now? Zoo, forest or park?</a>
                                     <a class="dropdown-item" href="@Url.Action("Index", "Blogs" )"><i class="fa fa-pencil" aria-hidden="true"></i> Wild-Kids Blogs</a>
@@ -84,7 +83,7 @@
 </a></li>
                         </ul>
                     </nav>
-                    <body onload="myFunction()">
+                    <body onload="myFunction1()">
 
                         <iframe id="homelearn" src="" width="83" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                     </body>
@@ -110,7 +109,6 @@
                                         <li><a href="@Url.Action("Index", "Home" )">Home</a></li>
                                         <li><a href="@Url.Action("Parents", "Home" )">Parents</a></li>
                                         <li><a href="@Url.Action("About", "Home" )">About Us</a></li>
-                                        <li><a href="@Url.Action("Whatsnew", "Home" )">What's new</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -136,7 +134,7 @@
 
         </script>
         <script>
-            function myFunction() {
+            function myFunction1() {
                 var x = document.URL;
                 document.getElementById("homelearn").src = 'https://www.facebook.com/plugins/share_button.php?href=' + x + '&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId';
 

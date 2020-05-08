@@ -129,5 +129,12 @@ namespace HomeWildLearn.Controllers
 
             return View();
         }
+
+        public ActionResult QuizTest()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
     }
 }
