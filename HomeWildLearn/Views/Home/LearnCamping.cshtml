@@ -1,7 +1,37 @@
 ﻿
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<link href="~/css/learncamping.css" rel="stylesheet">
+<link href="~/css/hostspots.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script>
+    jQuery(function ($) {
+        var pop = $('.map-popup');
+        pop.click(function (q) {
+            q.stopPropagation();
+        });
+
+        $('a.marker').click(function (q) {
+            q.preventDefault();
+            q.stopPropagation();
+            $(this).next('.map-popup').toggleClass('open');
+            $(this).parent().siblings().children('.map-popup').removeClass('open');
+        });
+
+        $(document).click(function () {
+            pop.removeClass('open');
+        });
+
+        pop.each(function () {
+            var w = $(window).outerWidth(),
+                edge = Math.round(($(this).offset().left) + ($(this).outerWidth()));
+            if (w < edge) {
+                $(this).addClass('edge');
+            }
+        });
+    });
+</script>
+
+
 
 <div class="ftco-blocks-cover-1">
     <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('../Content/images/camp1.jpg')">
@@ -11,25 +41,340 @@
                     <span class="text-cursive h2 text-red">Welcome To Wild-HomeLearn</span>
                     <p><a href="#" class="text-yellow">Lets learn Camping </a></p>
                     <p><a href="index.html" class="text-white">Home</a> <span class="mx-0">/</span> <strong>Learn Camping </strong></p>
-
                 </div>
-
             </div>
         </div>
     </div>
 </div>
 
-<div class="site-section">
-    <div class="container">
-        <div class="row">
-            <h1 class="page-header"></h1>
-        </div>
+
+<div class="container ">
+    <div>
+        <section>
+            <div class="wizard">
+                <div class="wizard-inner">
+                    <div class="connecting-line"></div>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Ready for camping?">
+                                <span class="round-tab">
+                                    <i class="glyphicon glyphicon-tent"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li role="presentation" class="disabled">
+                            <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Tools you requiure">
+                                <span class="round-tab">
+                                    <i class="glyphicon glyphicon-wrench"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li role="presentation" class="disabled">
+                            <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Beware">
+                                <span class="round-tab">
+                                    <i class="glyphicon glyphicon-warning-sign"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li role="presentation" class="disabled">
+                            <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Checklist">
+                                <span class="round-tab">
+                                    <i class="glyphicon glyphicon-ok"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <form role="form">
+                    <div class="tab-content">
+                        <div class="tab-pane active" role="tabpanel" id="step1">
+                            <ul class="list-inline pull-right ">
+                                <li><button type="button" class="btn btn-primary next-step">Next</button></li>
+                            </ul>
+                            <h1>Lets learn camping....</h1>
+                            <p>Follow the steps...and click next button for step 2</p>
+
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="step2">
+                            <ul class="list-inline pull-right">
+                                <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+                                <li><button type="button" class="btn btn-primary next-step">Next</button></li>
+                            </ul>
+                            <h1 style="color:aqua; text-align:center;">Step 2</h1>
+                            <h2 style="color:aqua; text-align:center;">Know about the tools you will require..</h2>
+                            <div class="map">
+
+                                <div class="map-item map-item1">
+                                    <a class="marker marker1" href="#marker1">1</a>
+
+                                    <aside id="marker1" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+
+                                <div class="map-item map-item2">
+                                    <a class="marker marker2" href="#marker2">2</a>
+
+                                    <aside id="marker2" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+
+                                <div class="map-item map-item3">
+                                    <a class="marker marker3" href="#marker3">3</a>
+
+                                    <aside id="marker3" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+
+                                <div class="map-item map-item4">
+                                    <a class="marker marker4" href="#marker4">4</a>
+
+                                    <aside id="marker2" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item5">
+                                    <a class="marker marker5" href="#marker5">5</a>
+
+                                    <aside id="marker5" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item6">
+                                    <a class="marker marker6" href="#marker6">6</a>
+
+                                    <aside id="marker6" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item7">
+                                    <a class="marker marker7" href="#marker7">7</a>
+
+                                    <aside id="marker7" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item8">
+                                    <a class="marker marker8" href="#marker8">8</a>
+
+                                    <aside id="marker8" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item9">
+                                    <a class="marker marker9" href="#marker9">9</a>
+
+                                    <aside id="marker9" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item10">
+                                    <a class="marker marker10" href="#marker10">10</a>
+
+                                    <aside id="marker10" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item11">
+                                    <a class="marker marker11" href="#marker11">11</a>
+
+                                    <aside id="marker11" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item12">
+                                    <a class="marker marker12" href="#marker12">12</a>
+
+                                    <aside id="marker12" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item13">
+                                    <a class="marker marker13" href="#marker13">13</a>
+
+                                    <aside id="marker13" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item14">
+                                    <a class="marker marker14" href="#marker14">14</a>
+
+                                    <aside id="marker14" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item15">
+                                    <a class="marker marker15" href="#marker15">15</a>
+
+                                    <aside id="marker15" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item16">
+                                    <a class="marker marker16" href="#marker2">16</a>
+
+                                    <aside id="marker16" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item17">
+                                    <a class="marker marker17" href="#marker17">17</a>
+
+                                    <aside id="marker17" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item18">
+                                    <a class="marker marker18" href="#marker18">18</a>
+
+                                    <aside id="marker18" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item19">
+                                    <a class="marker marker19" href="#marker19">19</a>
+
+                                    <aside id="marker19" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item20">
+                                    <a class="marker marker20" href="#marker20">20</a>
+
+                                    <aside id="marker20" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item21">
+                                    <a class="marker marker21" href="#marker21">21</a>
+
+                                    <aside id="marker21" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item22">
+                                    <a class="marker marker22" href="#marker22">22</a>
+
+                                    <aside id="marker22" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item23">
+                                    <a class="marker marker23" href="#marker23">23</a>
+
+                                    <aside id="marker23" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item24">
+                                    <a class="marker marker24" href="#marker24">24</a>
+
+                                    <aside id="marker24" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        
+                                    </aside>
+                                </div>
+                                <div class="map-item map-item25">
+                                    <a class="marker marker25" href="#marker25">25</a>
+
+                                    <aside id="marker25" class="map-popup">
+                                        <h3 class="popup-title">Popup Title</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        
+                                    </aside>
+                                </div>
+                                <img src="~/Content/images/animals/campkids.jpeg" alt="">
+                            </div>
+                            <br>
+
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="step3">
+                            <ul class="list-inline pull-right">
+                                <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+                                <li><button type="button" class="btn btn-primary btn-info-full next-step">Next</button></li>
+                            </ul>
+                            <h3>Step 3</h3>
+
+
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="complete">
+                            <h3>Complete</h3>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </form>
+            </div>
+        </section>
     </div>
 </div>
 
+<script>
+        $(document).ready(function () {
+            //Initialize tooltips
+            $('.nav-tabs > li a[title]').tooltip();
 
-<div class="site-section">
-    <div class="container">
-  
-    </div>
-</div>
+            //Wizard
+            $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+
+                var $target = $(e.target);
+
+                if ($target.parent().hasClass('disabled')) {
+                    return false;
+                }
+            });
+
+            $(".next-step").click(function (e) {
+
+                var $active = $('.wizard .nav-tabs li.active');
+                $active.next().removeClass('disabled');
+                nextTab($active);
+
+            });
+            $(".prev-step").click(function (e) {
+
+                var $active = $('.wizard .nav-tabs li.active');
+                prevTab($active);
+
+            });
+        });
+
+        function nextTab(elem) {
+            $(elem).next().find('a[data-toggle="tab"]').click();
+        }
+        function prevTab(elem) {
+            $(elem).prev().find('a[data-toggle="tab"]').click();
+        }
+    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>

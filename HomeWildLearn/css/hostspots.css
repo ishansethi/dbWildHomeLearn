@@ -1,0 +1,283 @@
+﻿
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.map {
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+    background-color: #ccc;
+}
+
+    .map img {
+        display: block;
+        width: 100%;
+    }
+
+.map-popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 99;
+    width: 60%;
+    padding: 2rem;
+    background-color: #fff;
+    transition: all 300ms ease-in;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 24px rgba(0,0,0,0.22);
+    opacity: 0;
+    visibility: hidden;
+}
+
+    .map-popup > *:first-child {
+        margin-top: 0;
+    }
+
+    .map-popup > *:last-child {
+        margin-bottom: 0;
+    }
+
+    .map-popup.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+.marker {
+    position: absolute;
+    z-index: 1;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    color: #fff;
+    line-height: 36px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: tomato;
+    transition: all 300ms;
+}
+
+.marker1 {
+    top: 51%;
+    left: 65%;
+}
+
+.marker2 {
+    top: 50%;
+    left: 64%;
+}
+.map-item3 {
+    top: 50%;
+    left: 64%;
+}
+
+.map-item4 {
+    top: 50%;
+    left: 64%;
+}
+
+.map-item5 {
+    top: 50%;
+    left: 64%;
+}
+
+.map-item6 {
+    top: 50%;
+    left: 64%;
+}
+
+.map-item7 {
+    top: 50%;
+    left: 64%;
+}
+
+.map-item8 {
+    top: 50%;
+    left: 64%;
+}
+
+.map-item9 {
+    top: 50%;
+    left: 64%;
+}
+
+.map-item10 {
+    top: 50%;
+    left: 64%;
+}
+
+.map-item11 {
+    top: 50%;
+    left: 64%;
+}
+
+.map-item12 {
+    top: 50%;
+    left: 64%;
+}
+
+.map-item13 {
+    top: 50%;
+    left: 64%;
+}
+
+.map-item14 {
+    top: 50%;
+    left: 64%;
+}
+
+.map-item15 {
+    top: 50%;
+    left: 64%;
+}
+
+@media only screen and (min-width:48em) {
+    .map-item {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+    }
+
+        .map-item .marker {
+            top: auto;
+            left: auto;
+        }
+
+    .map-item1 {
+        top: 11%;
+        left: 4%;
+    }
+
+    .map-item2 {
+        top: 11%;
+        left: 19%;
+    }
+    .map-item3 {
+        top: 11%;
+        left: 31%;
+    }
+    .map-item4 {
+        top: 11%;
+        left:46%;
+    }
+    .map-item5 {
+        top: 11%;
+        left: 58%;
+    }
+    .map-item6 {
+        top: 11%;
+        left: 71%;
+    }
+    .map-item7 {
+        top: 11%;
+        left: 89%;
+    }
+    .map-item8 {
+        top: 31%;
+        left: 4%;
+    }
+    .map-item9 {
+        top: 31%;
+        left: 19%;
+    }
+    .map-item10 {
+        top: 31%;
+        left: 31%;
+    }
+    .map-item11 {
+        top: 31%;
+        left: 46%;
+    }
+    .map-item12 {
+        top: 31%;
+        left: 58%;
+    }
+    .map-item13 {
+        top: 31%;
+        left: 71%;
+    }
+    .map-item14 {
+        top: 31%;
+        left: 89%;
+    }
+    .map-item15 {
+        top: 55%;
+        left: 4%;
+    }
+    .map-item16 {
+        top: 55%;
+        left: 19%;
+    }
+    .map-item17 {
+        top: 52%;
+        left: 41%;
+    }
+    .map-item18 {
+        top: 55%;
+        left: 55%;
+    }
+    .map-item19 {
+        top: 55%;
+        left: 72%;
+    }
+    .map-item20 {
+        top: 55%;
+        left: 89%;
+    }
+    .map-item21 {
+        top: 84%;
+        left: 4%;
+    }
+    .map-item22 {
+        top: 84%;
+        left: 19%;
+    }
+    .map-item23 {
+        top: 84%;
+        left: 42%;
+    }
+    .map-item24 {
+        top: 84%;
+        left: 80%;
+    }
+    .map-item25 {
+        top: 84%;
+        left: 89%;
+    }
+    
+
+    .map-popup {
+        position: absolute;
+        left: 58px;
+        width: 280px;
+        transform: translateY(-50%);
+    }
+
+        .map-popup:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -16px;
+            margin-top: -16px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 16px 16px 16px 0;
+            border-color: transparent #fff transparent transparent;
+        }
+
+        .map-popup.edge {
+            left: auto;
+            right: calc(100% + 24px);
+        }
+
+            .map-popup.edge:before {
+                left: auto;
+                right: -16px;
+                border-width: 16px 0 16px 16px;
+                border-color: transparent transparent transparent #fff;
+            }
+}

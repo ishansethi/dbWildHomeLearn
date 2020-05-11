@@ -242,6 +242,7 @@
     <Content Include="Content\emu.jpg" />
     <Content Include="Content\emu.mp4" />
     <Content Include="Content\exp.jpg" />
+    <Content Include="Content\images\animals\campkids.jpeg" />
     <Content Include="Content\images\animals\Canva - Emu On Ground.jpg" />
     <Content Include="Content\images\animals\cass.jpg" />
     <Content Include="Content\images\animals\devil.jpg" />
@@ -252,6 +253,7 @@
     <Content Include="Content\images\animals\emu2.jpg" />
     <Content Include="Content\images\animals\jellyfish.jpg" />
     <Content Include="Content\images\animals\kangaroo.jpg" />
+    <Content Include="Content\images\animals\kidscamp.jpeg" />
     <Content Include="Content\images\animals\Koala_demo_details.jpg" />
     <Content Include="Content\images\animals\koka.jpg" />
     <Content Include="Content\images\animals\penguin.jpg" />
@@ -371,6 +373,7 @@
     <Content Include="Content\question.jpg" />
     <Content Include="Content\qui.jpg" />
     <Content Include="Content\quiz.jpg" />
+    <Content Include="Content\quiz.mp3.mp3" />
     <Content Include="Content\quokka.mpeg" />
     <Content Include="Content\rain2.jpg" />
     <Content Include="Content\rainforest-during-foggy-day-975771 %281%29.jpg" />
@@ -387,6 +390,8 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\details.css" />
+    <Content Include="css\hostspots.css" />
+    <Content Include="css\learncamping.css" />
     <Content Include="css\modern-business.css" />
     <Content Include="css\newquiz.css" />
     <Content Include="css\quiz.css" />
@@ -579,6 +584,9 @@
     <Content Include="Content\scss\_site-navbar.scss" />
     <None Include="Properties\PublishProfiles\HomeWildLearn - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\HomeWildLearn20200419011418 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\HomeWildLearn20200511120523 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\HomeWildLearnAzure - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\HomeWildLearnTim - Web Deploy.pubxml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-migrate-3.0.0.js" />
     <Content Include="Scripts\jquery-migrate-3.0.1.min.js" />
@@ -677,6 +685,7 @@
     <Content Include="Views\Blogs\Edit.cshtml" />
     <Content Include="Views\Blogs\Index.cshtml" />
     <Content Include="Views\Home\QuizTest.cshtml" />
+    <Content Include="Views\Home\LetsMigrate.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

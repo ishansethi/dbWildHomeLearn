@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="~/Content/owl.theme.default.min.css">
     <link rel="stylesheet" href="~/Content/fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="~/Content/aos.css">
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="~/Content/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -38,9 +39,7 @@
         <header class="site-navbar site-navbar-target" role="banner">
             <div class="container mb-3">
                 <div class="d-flex align-items-center">
-                    <div class="site-logo mr-auto">
-                        <a href="@Url.Action("Index", "Home" )">Wild-HomeLearn<span class="text-primary">.</span></a>
-                    </div>
+
                     @*<div class="site-quick-contact d-none d-lg-flex ml-auto ">
                         <div class="d-flex site-info align-items-center">
                             <span class="block-icon mr-3"><span class="icon-user-o"></span></span>
@@ -70,6 +69,10 @@
                                     <a class="dropdown-item" href="@Url.Action("QuizTest", "Home" )"><i class="fa fa-question" aria-hidden="true"></i> Let's Test Your Knowledge</a>
                                     <a class="dropdown-item" href="@Url.Action("InterestingFacts", "Home" )"><i class="fa fa-search" aria-hidden="true"></i> Interesting Facts and Get Aware</a>
                                     <a class="dropdown-item" href="@Url.Action("WhereTo", "Home" )"><i class="fa fa-tree" aria-hidden="true"></i> Where to go now? Zoo, forest or park?</a>
+                                    <a class="dropdown-item" href="@Url.Action("LearnCamping", "Home" )">
+                                        <i class="fa fa-free-code-camp" aria-hidden="true"></i>
+                                        Learn Camping
+                                    </a>
                                     <a class="dropdown-item" href="@Url.Action("Index", "Blogs" )"><i class="fa fa-pencil" aria-hidden="true"></i> Wild-Kids Blogs</a>
                                 </div>
                             </li>

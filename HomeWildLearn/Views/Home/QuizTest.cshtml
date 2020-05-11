@@ -497,7 +497,12 @@
             <h1 class="mc_quiz">
                 Welcome to WildHomeLearn Quiz
             </h1>
-            <button onclick="location.href='@Url.Action("Index", "Home")'" ><i class="fa fa-home" aria-hidden="true"></i> Home</button>
+            <audio controls>
+                <source src="~/Content/quiz.mp3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <br>
+            <button onclick="location.href='@Url.Action("Index", "Home")'"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
             <div class="my-progress">
                 <progress class="my-progress-bar" min="0" max="100" value="0" step="9" aria-labelledby="my-progress-completion"></progress>
                 <p id="my-progress-completion" class="js-my-progress-completion sr-only" aria-live="polite">0% complete</p>
