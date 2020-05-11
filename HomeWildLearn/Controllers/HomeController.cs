@@ -136,5 +136,12 @@ namespace HomeWildLearn.Controllers
 
             return View();
         }
+
+        public ActionResult LetsMigrate()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
     }
 }

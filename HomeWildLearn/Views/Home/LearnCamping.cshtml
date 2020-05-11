@@ -1,7 +1,8 @@
 ﻿
 <link href="~/css/learncamping.css" rel="stylesheet">
 <link href="~/css/hostspots.css" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link href="~/css/beware.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
 <script>
     jQuery(function ($) {
@@ -48,7 +49,7 @@
 </div>
 
 
-<div class="container ">
+<div class="container">
     <div>
         <section>
             <div class="wizard">
@@ -76,6 +77,7 @@
                                 </span>
                             </a>
                         </li>
+
                         <li role="presentation" class="disabled">
                             <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Checklist">
                                 <span class="round-tab">
@@ -91,7 +93,7 @@
                             <ul class="list-inline pull-right ">
                                 <li><button type="button" class="btn btn-primary next-step">Next</button></li>
                             </ul>
-                            <h1>Lets learn camping....</h1>
+                            <span class="text-cursive h1 text-red">Lets learn camping....</span>
                             <p>Follow the steps...and click next button for step 2</p>
 
                         </div>
@@ -100,16 +102,20 @@
                                 <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
                                 <li><button type="button" class="btn btn-primary next-step">Next</button></li>
                             </ul>
-                            <h1 style="color:aqua; text-align:center;">Step 2</h1>
-                            <h2 style="color:aqua; text-align:center;">Know about the tools you will require..</h2>
+
+                            <h1 style="color:black; text-align:center; font-family:cursive;">Know about the tools you will require..</h1>
+                            <hr>
                             <div class="map">
 
                                 <div class="map-item map-item1">
                                     <a class="marker marker1" href="#marker1">1</a>
 
                                     <aside id="marker1" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Flashlight</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            Use it to light your night at forest.
+                                        </p>
                                     </aside>
                                 </div>
 
@@ -117,8 +123,11 @@
                                     <a class="marker marker2" href="#marker2">2</a>
 
                                     <aside id="marker2" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Compass</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            It shows you the directions,kids do not lose it anytime!
+                                        </p>
                                     </aside>
                                 </div>
 
@@ -126,8 +135,11 @@
                                     <a class="marker marker3" href="#marker3">3</a>
 
                                     <aside id="marker3" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Camera</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            Kids! record your happy time with it!
+                                        </p>
                                     </aside>
                                 </div>
 
@@ -135,182 +147,257 @@
                                     <a class="marker marker4" href="#marker4">4</a>
 
                                     <aside id="marker2" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Electronic device</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            Take it to play games or for any other entertainment.
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item5">
                                     <a class="marker marker5" href="#marker5">5</a>
 
                                     <aside id="marker5" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Travel bag</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            Use it to pack up your essential things.
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item6">
                                     <a class="marker marker6" href="#marker6">6</a>
 
                                     <aside id="marker6" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Trekking Shoes</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            Wear it to walk through the muddy mountain road
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item7">
                                     <a class="marker marker7" href="#marker7">7</a>
 
                                     <aside id="marker7" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Stew-pan</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            Kid! ask your parents to use it to cook
+                                        </p>
                                     </aside>
                                 </div>
+                                @*<div class="map-item map-item8">
+                <a class="marker marker8" href="#marker8">8</a>
+
+                <aside id="marker8" class="map-popup">
+                    <h3 class="popup-title">Popup Title</h3>
+                    <p>
+                        <i class="fa fa-wrench" aria-hidden="true"></i>
+                        It shows you the directions,kids do not lose it anytime!
+                    </p>                                    </aside>
+            </div>*@
                                 <div class="map-item map-item8">
                                     <a class="marker marker8" href="#marker8">8</a>
 
-                                    <aside id="marker8" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                    <aside id="marker9" class="map-popup">
+                                        <h3 class="popup-title">Axe</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            You can ask your parents to cut the branches to light a fire using this
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item9">
                                     <a class="marker marker9" href="#marker9">9</a>
 
                                     <aside id="marker9" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Rope</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            Use it for tightening the things up.
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item10">
                                     <a class="marker marker10" href="#marker10">10</a>
 
                                     <aside id="marker10" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Knife</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            Use it to cut fruits and other things...but be careful ask your parents to doi it for you.
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item11">
                                     <a class="marker marker11" href="#marker11">11</a>
 
                                     <aside id="marker11" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Matchstick</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            kid! let your dad or mum set fire for roasting Marshmallow.
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item12">
                                     <a class="marker marker12" href="#marker12">12</a>
 
                                     <aside id="marker12" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Sunhat</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            kid! use it protect yourself form sunlight
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item13">
                                     <a class="marker marker13" href="#marker13">13</a>
 
                                     <aside id="marker13" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Binoculars</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            kid! use it to see further or to look in the sky for stars.
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item14">
                                     <a class="marker marker14" href="#marker14">14</a>
 
                                     <aside id="marker14" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">First aid bag</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            Use it when you get hurt!
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item15">
                                     <a class="marker marker15" href="#marker15">15</a>
 
                                     <aside id="marker15" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Life ring</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            kid! use it to for safe swimming.
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item16">
-                                    <a class="marker marker16" href="#marker2">16</a>
+                                    <a class="marker marker16" href="#marker16">16</a>
 
                                     <aside id="marker16" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Chair</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            kid! sit on the chair to enjoy the nature
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item17">
                                     <a class="marker marker17" href="#marker17">17</a>
 
                                     <aside id="marker17" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Umbrella</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            kid! use it to protect yourself from rain
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item18">
                                     <a class="marker marker18" href="#marker18">18</a>
 
                                     <aside id="marker18" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Shovel</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            kid! use it to help for setting up the tent
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item19">
                                     <a class="marker marker19" href="#marker19">19</a>
 
                                     <aside id="marker19" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Sleeping bag</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            kid! use it for a good sleep
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item20">
                                     <a class="marker marker20" href="#marker20">20</a>
 
                                     <aside id="marker20" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Rubber dinghy</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            use it for boating
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item21">
                                     <a class="marker marker21" href="#marker21">21</a>
 
                                     <aside id="marker21" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Water bottle</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            kid! use it for storing an to drink water
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item22">
                                     <a class="marker marker22" href="#marker22">22</a>
 
                                     <aside id="marker22" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Camping light</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            kid! use it to light your tent in the night
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item23">
                                     <a class="marker marker23" href="#marker23">23</a>
 
                                     <aside id="marker23" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
+                                        <h3 class="popup-title">Tent</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            kid! It is your home in nature!
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item24">
                                     <a class="marker marker24" href="#marker24">24</a>
 
                                     <aside id="marker24" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
-                                        
+                                        <h3 class="popup-title">Canned food</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            kid! take it to let you eat satisfied
+                                        </p>
                                     </aside>
                                 </div>
                                 <div class="map-item map-item25">
                                     <a class="marker marker25" href="#marker25">25</a>
 
                                     <aside id="marker25" class="map-popup">
-                                        <h3 class="popup-title">Popup Title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima delectus illum dolor, nesciunt sit iure, debitis eligendi blanditiis, tempore quidem cupiditate quaerat incidunt sapiente aliquam? Debitis!</p>
-                                        
+                                        <h3 class="popup-title">Fishing pole</h3>
+                                        <p>
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            Kid! use it to catch some fish
+                                        </p>
                                     </aside>
                                 </div>
                                 <img src="~/Content/images/animals/campkids.jpeg" alt="">
                             </div>
+
                             <br>
 
                         </div>
@@ -319,12 +406,205 @@
                                 <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
                                 <li><button type="button" class="btn btn-primary btn-info-full next-step">Next</button></li>
                             </ul>
-                            <h3>Step 3</h3>
+                            <h1 style="color:black; text-align:center; font-family:cursive;">Be aware of the following things..</h1>
+                            <hr>
+                            <div class="container1">
+                                <div class="card">
+                                    <div class="face face1">
+                                        <div class="content">
+                                            <img src="~/Content/snake.png" height="100px" width="100px" style="margin: 0 auto;">
+                                            <h3 style="text-align:center">Beware of Snake</h3>
+                                        </div>
+                                    </div>
+                                    <div class="face face2">
+                                        <div class="content">
+                                            <p>
+                                                Snakes will only strike kids when they feel threatened. stay calm, back away and wait for it to move.
+                                                Bitten by a snake, apply a pressure immobilisation bandage to the limb immediately, splint the limb and call an ambulance.
+                                            </p>
 
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <div class="card">
+                                    <div class="face face1">
+                                        <div class="content">
+                                            <img src="~/Content/emergency number.png" height="100px" width="100px" style="margin: 0 auto;">
+                                            <h3 style="text-align:center">Beware of emergency number</h3>
+                                        </div>
+                                    </div>
+                                    <div class="face face2">
+                                        <div class="content">
+                                            <p>
+                                                Kid! you need to remember to call 000 when you need help.
+                                                Call 132 500 from anywhere  for flood, storm, tsunami and earthquake emergency.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="face face1">
+                                        <div class="content">
+                                            <img src="~/Content/trash.png" height="100px" width="100px" style="margin: 0 auto;">
+                                            <h3 style="text-align:center">Beware of taking away trash</h3>
+                                        </div>
+                                    </div>
+                                    <div class="face face2">
+                                        <div class="content">
+                                            <p>Kid! When you finish camping, there are a lot of trash, take them away! It is good for environment  </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="testimonials">
+                                <div class="inner">
+                                    <h1>Safety Precautions</h1>
+                                    <div class="border"></div>
+
+                                    <div class="row1">
+                                        <div class="col">
+                                            <div class="testimonial">
+                                                <img src="~/Content/images/animals/tent.png" alt="">
+                                                <div class="name">Be aware of any risks around your tent</div>
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <p>
+                                                    Avoid camping directly under large gum trees. Set up away from potential dangers like rivers, creeks, or steep drop-offs
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="testimonial">
+                                                <img src="~/Content/images/animals/canned food.png" alt="">
+                                                <div class="name">Bring plenty of food and water</div>
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <p>
+                                                    Make sure you bring plenty of water with you for drinking and washing. Air-tight containers are important to keep bugs from crawling in.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="testimonial">
+                                                <img src="~/Content/images/animals/sun.png" alt="">
+                                                <div class="name">Be aware of the weather</div>
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <p>
+                                                    Keep an eye on the weather and pack accordingly. Look at both the day-time and night-time temperatures as warm sunny days can turn into frosty cold nights.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="testimonial">
+                                                <img src="~/Content/images/animals/first aid bag.png" alt="">
+                                                <div class="name">Have First Aid equipment available</div>
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <p>
+                                                    Many of our parks are in remote locations, so medical aid can be far away. It’s a good idea to camp with someone who has First Aid training, and an even better idea is to be trained yourself.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="testimonial">
+                                                <img src="~/Content/images/animals/electronic device.png" alt="">
+                                                <div class="name">Know what services are available</div>
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <p>
+                                                    Many national parks have no or limited mobile phone coverage. Have a look at your network’s coverage map to work out where you can go to make an emergency phone call if you needed to.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="testimonial">
+                                                <img src="~/Content/images/animals/kangaroo.png" alt="">
+                                                <div class="name">Keep your eye out for wildlife</div>
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <p>
+                                                    Kangaroos, emus, possums, kookaburras and magpies may be cute to look at but they can be crafty when it comes to raiding your campsite.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                         <div class="tab-pane" role="tabpanel" id="complete">
-                            <h3>Complete</h3>
+                            <span class="text-cursive h1 text-red">Lets prepare checklist for your camping...</span>
+
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Flashlight">Flashlight </h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Compass">Compass</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Camera">Camera</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Electronic device">Electronic device</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Travel bag">Travel bag</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Camping Shoes">Camping Shoes</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Stew-pan">Stew-pan</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Axe">Axe</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Rope">Rope</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Knife">Knife</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Matchstick">Matchstick</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Sunhat">Sunhat</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Telescope">Telescope</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="First aid bag">First aid bag</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Life ring">Life ring</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Chair">Chair</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Unmbrella">Unmbrella</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Shovel">Shovel</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Sleeping bag">Sleeping bag</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Rubber dinghy">Rubber dinghy</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Water bottle">Water bottle</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Camping light">Camping light</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Tent">Tent</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Canned food">Canned food</h2>
+                            <h2 class="text-cursive text-red"><input type="checkbox" name="category" value="Fishing pole">Fishing pole</h2>
+
+
+                            <h2 class="text-cursive text-red"><input id="btnOperate" type="button" value="select" onclick="window.print()"></h2>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -335,42 +615,58 @@
 </div>
 
 <script>
-        $(document).ready(function () {
-            //Initialize tooltips
-            $('.nav-tabs > li a[title]').tooltip();
-
-            //Wizard
-            $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
-
-                var $target = $(e.target);
-
-                if ($target.parent().hasClass('disabled')) {
-                    return false;
+    function static_num() {
+        document.getElementById("btnOperate").onclick = function () {
+            var arr = new Array();
+            var items = document.getElementsByName("category");
+            for (i = 0; i < items.length; i++) {
+                if (items[i].checked) {
+                    arr.push(items[i].value);
+                    window.print(items[i].value);
                 }
-            });
+            }
+          
+        };
+    };
+</script>
 
-            $(".next-step").click(function (e) {
+<script>
+    $(document).ready(function () {
+        //Initialize tooltips
+        $('.nav-tabs > li a[title]').tooltip();
 
-                var $active = $('.wizard .nav-tabs li.active');
-                $active.next().removeClass('disabled');
-                nextTab($active);
+        //Wizard
+        $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
 
-            });
-            $(".prev-step").click(function (e) {
+            var $target = $(e.target);
 
-                var $active = $('.wizard .nav-tabs li.active');
-                prevTab($active);
-
-            });
+            if ($target.parent().hasClass('disabled')) {
+                return false;
+            }
         });
 
-        function nextTab(elem) {
-            $(elem).next().find('a[data-toggle="tab"]').click();
-        }
-        function prevTab(elem) {
-            $(elem).prev().find('a[data-toggle="tab"]').click();
-        }
-    </script>
+        $(".next-step").click(function (e) {
+
+            var $active = $('.wizard .nav-tabs li.active');
+            $active.next().removeClass('disabled');
+            nextTab($active);
+
+        });
+        $(".prev-step").click(function (e) {
+
+            var $active = $('.wizard .nav-tabs li.active');
+            prevTab($active);
+
+        });
+    });
+
+    function nextTab(elem) {
+        $(elem).next().find('a[data-toggle="tab"]').click();
+    }
+    function prevTab(elem) {
+        $(elem).prev().find('a[data-toggle="tab"]').click();
+    }
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -378,3 +674,4 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
