@@ -278,6 +278,8 @@
     <Content Include="Content\images\camp1.jpg" />
     <Content Include="Content\images\fact1.png" />
     <Content Include="Content\images\facts2.jpg" />
+    <Content Include="Content\images\flaticon\svg\blogging.svg" />
+    <Content Include="Content\images\flaticon\svg\test.svg" />
     <Content Include="Content\images\gallery\emu1.jpg" />
     <Content Include="Content\images\gallery\emu2.jpg" />
     <Content Include="Content\images\gallery\emu3.jpg" />

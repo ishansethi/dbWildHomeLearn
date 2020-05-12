@@ -2,6 +2,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 
 <div class="ftco-blocks-cover-1">
     <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('../Content/images/mapaus.jpg')">
@@ -17,44 +20,114 @@
     </div>
 </div>
 
+<style>
+        .cards-list {
+            z-index: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
 
-<div class="container mt-2">
-    <!--   <div class="card card-block mb-2">
-        <h4 class="card-title">Card 1</h4>
-        <p class="card-text">Welcom to bootstrap card styles</p>
-        <a href="#" class="btn btn-primary">Submit</a>
-      </div>   -->
-    <div class="row">
-        <div class="col-md-3 col-sm-6 item">
-            <div class="card item-card card-block">
-                <h4 class="card-title text-right"><i class="material-icons">settings</i></h4>
-                <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
-                <h5 class="item-card-title mt-3 mb-3">Sierra Web Development • Owner</h5>
-                <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
+        .card {
+            margin: 30px auto;
+            width: 300px;
+            height: 300px;
+            border-radius: 40px;
+            box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+            .card .card_image {
+                width: inherit;
+                height: inherit;
+                border-radius: 40px;
+            }
+
+                .card .card_image img {
+                    width: inherit;
+                    height: inherit;
+                    border-radius: 40px;
+                    object-fit: cover;
+                }
+
+            .card .card_title {
+                text-align: center;
+                border-radius: 0px 0px 40px 40px;
+                font-family: sans-serif;
+                font-weight: bold;
+                font-size: 30px;
+                margin-top: -80px;
+                height: 40px;
+            }
+
+            .card:hover {
+                transform: scale(0.9, 0.9);
+                box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
+            }
+
+        .title-white {
+            color: white;
+        }
+
+        .title-black {
+            color: black;
+        }
+
+
+
+
+        /*
+    .card {
+      margin: 30px auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 40px;
+      background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-repeat: no-repeat;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+      transition: 0.4s;
+    }
+    */
+</style>
+
+<div class="cards-list">
+    <a href="" class="card 1" >
+        <div class="card_image"> <img src="https://media.giphy.com/media/AtJPYF7AaPRTi/giphy.gif" /> </div>
+        <div class="card_title title-white">
+            <p>Whales</p>
+        </div>
+    </a>
+
+    <a href="" class="card 2">
+            <div class="card_image">
+                <img src="https://media.giphy.com/media/zHokhPIy6lwas/giphy.gif" />
+            </div>
+            <div class="card_title title-white">
+                <p>Penguins</p>
+            </div>
+        </a>
+</div>
+<hr>
+<div class="site-section py-5 bg-success" id="sec1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 d-flex">
+                <h2 class="text-cursive text-white m-0">Hey Kids  <small>- lets learn about migration of Whales</small></h2>
             </div>
         </div>
-        <div class="col-md-3 col-sm-6 item">
-            <div class="card item-card card-block">
-                <h4 class="item-card-title text-right"><i class="material-icons">settings</i></h4>
-                <img src="https://static.pexels.com/photos/7357/startup-photos.jpg" alt="Photo of sunset">
-                <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
-                <p class="card-text">This is a company that builds websites, web .</p>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6 item">
-            <div class="card item-card card-block">
-                <h4 class="item-card-title text-right"><i class="material-icons">settings</i></h4>
-                <img src="https://static.pexels.com/photos/262550/pexels-photo-262550.jpeg" alt="Photo of sunset">
-                <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
-                <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6 item">
-            <div class="card item-card card-block">
-                <h4 class="item-card-title text-right"><i class="material-icons">settings</i></h4>
-                <img src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg" alt="Photo of sunset">
-                <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
-                <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
+    </div>
+</div>
+<hr>
+<div class="site-section py-5 bg-warning" id="sec1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 d-flex">
+                <h2 class="text-cursive text-white m-0">Hey Kids  <small>- lets learn about migration of Penguins</small></h2>
             </div>
         </div>
     </div>
