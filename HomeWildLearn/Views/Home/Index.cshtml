@@ -98,7 +98,20 @@ password=prompt('Please enter your password to view this page!','');
         </div>
     </div>
 </div>
-<div class="site-section py-5 bg-warning" id="sec1">
+
+<div class="site-section py-5 bg-success" id="sec1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 d-flex">
+                <h1 class="text-cursive text-white m-0">
+                    Hey Kids!! Lets begin your journey to become a Wildlife Expert <a href="#sec2" class=" ct-js-btn-scroll" ><i class="fa fa-graduation-cap"  aria-hidden="true"></i></a>
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div class="site-section py-5 bg-warning" id="sec1">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 d-flex">
@@ -107,7 +120,8 @@ password=prompt('Please enter your password to view this page!','');
             </div>
         </div>
     </div>
-</div>
+</div>*@
+
 @*<div class="site-section py-5 badge-success" id="sec1">
     <div class="container">
         <div class="row justify-content-center">
@@ -118,7 +132,7 @@ password=prompt('Please enter your password to view this page!','');
         </div>
     </div>
 </div>*@
-<div class="site-section bg-info" id="sec1">
+<div class="site-section bg-warning" id="sec2">
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 text-center">
@@ -129,8 +143,8 @@ password=prompt('Please enter your password to view this page!','');
             <div class="col-lg-3">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/pawprint.svg" alt="Image" class="img-fluid"></span>
-                    <h3 class="text-teal">Animals Around Me !</h3>
-                    <p> Lets's check which animals are around me. Go!!</p>
+                    <h3>Animals Around Me !</h3>
+                    <p class="text-cursive"> Lets check which animals are around me. Go!!</p>
                     <p>
                         <a href="@Url.Action("Index", "wildlife_locations")" class="btn btn-primary btn-custom-1 mt-4">
                             <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
@@ -142,8 +156,8 @@ password=prompt('Please enter your password to view this page!','');
             <div class="col-lg-3">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/australia.svg" alt="Image" class="img-fluid"></span>
-                    <h3 class="text-teal">Explore Wild-Animals</h3>
-                    <p>Explore more about wild animals. Search on!</p>
+                    <h3>Explore Wild-Animals</h3>
+                    <p class="text-cursive">Explore more about wild animals. Search on!</p>
                     <p>
                         <a href="@Url.Action("Index", "Animals1")" class="btn btn-primary btn-custom-1 mt-4">
                             <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
@@ -155,8 +169,8 @@ password=prompt('Please enter your password to view this page!','');
             <div class="col-lg-3">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/test.svg" alt="Image" class="img-fluid"></span>
-                    <h3 class="text-teal">Want to check you knowledge? </h3>
-                    <p>Yayy...its quiz time. Just click on lets explore..</p>
+                    <h3>Check your knowledge </h3>
+                    <p class="text-cursive">Yayy...its quiz time. Just click on lets explore..</p>
                     <p>
                         <a href="@Url.Action("QuizTest")" class="btn btn-primary btn-custom-1 mt-4">
                             <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
@@ -168,8 +182,8 @@ password=prompt('Please enter your password to view this page!','');
             <div class="col-lg-3">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/birds.svg" alt="Image" class="img-fluid"></span>
-                    <h3 class="text-teal">How animals Migrate?</h3>
-                    <p>Wondering how animals migrate? </p>
+                    <h3>How animals Migrate?</h3>
+                    <p class="text-cursive">Wondering how animals migrate? </p>
                     <p>
                         <a href="@Url.Action("LetsMigrate")" class="btn btn-primary btn-custom-1 mt-4">
                             <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
@@ -184,8 +198,8 @@ password=prompt('Please enter your password to view this page!','');
             <div class="col-lg-3">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/search.svg" alt="Image" class="img-fluid"></span>
-                    <h3 class="text-teal">Interesting Facts and Get Aware</h3>
-                    <p> Learn some cool facts about wildlife with the awareness.</p>
+                    <h3>Interesting Facts and Get Aware</h3>
+                    <p class="text-cursive"> Learn some cool facts about wildlife with the awareness.</p>
                     <p>
                         <a href="@Url.Action("InterestingFacts")" class="btn btn-primary btn-custom-1 mt-4">
                             <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
@@ -197,8 +211,8 @@ password=prompt('Please enter your password to view this page!','');
             <div class="col-lg-3">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/forest.svg" alt="Image" class="img-fluid"></span>
-                    <h3 class="text-teal">Where to go Zoo, Forest or Park</h3>
-                    <p>Confused? Can't decide where to go for wild animal lookout?</p>
+                    <h3>Where to go Zoo, Forest or Park</h3>
+                    <p class="text-cursive">Confused? Can't decide where to go for wild animal lookout?</p>
                     <p>
                         <a href="@Url.Action("WhereTo")" class="btn btn-primary btn-custom-1 mt-4">
                             <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
@@ -210,8 +224,8 @@ password=prompt('Please enter your password to view this page!','');
             <div class="col-lg-3">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/camping-tent.svg" alt="Image" class="img-fluid"></span>
-                    <h3 class="text-teal">Want to learn "CAMPING?"</h3>
-                    <p>Do you want to experience and learn camping?</p>
+                    <h3>Want to learn "CAMPING?"</h3>
+                    <p class="text-cursive">Do you want to experience and learn camping?</p>
                     <p>
                         <a href="@Url.Action("LearnCamping")" class="btn btn-primary btn-custom-1 mt-4">
                             <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
@@ -223,8 +237,8 @@ password=prompt('Please enter your password to view this page!','');
             <div class="col-lg-3">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/blogging.svg" alt="Image" class="img-fluid"></span>
-                    <h3 class="text-teal">Checkout your mates experiences.</h3>
-                    <p>Share more about your experiences too..Lets Write</p>
+                    <h3>Checkout your mates experiences.</h3>
+                    <p class="text-cursive">Share more about your experiences too..Lets Write</p>
                     <p>
                         <a href="@Url.Action("Index", "Blogs")" class="btn btn-primary btn-custom-1 mt-4">
                             <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
@@ -237,11 +251,11 @@ password=prompt('Please enter your password to view this page!','');
     </div>
 </div>
 
-<div class="site-section bg-warning">
+<div class="site-section bg-info">
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 text-center">
-                <span class="text-cursive h5 text-white d-block">Most Searched Animals By - Our Wild Kids</span>
+                <span class="text-cursive h2 text-white d-block">Most Searched Animals By - Our Wild Kids</span>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -294,8 +308,8 @@ password=prompt('Please enter your password to view this page!','');
                     <span class="wrap-icon">
                         <span class="icon-child"></span>
                     </span>
-                    <h2>Wild Kids</h2>
-                    <p>By analyzing children's preferences and learning characteristics, we designed interactive teaching models that are attractive to children. Children's attention is captured by video to study and learn about Australian wildlife, and the learning results are detected by interactive game mode to ensure the quality of children's learning.</p>
+                    <h2 class="text-cursive">Wild Kids</h2>
+                    <p class="text-cursive">By analyzing children's preferences and learning characteristics, we designed interactive teaching models that are attractive to children. Children's attention is captured by video to study and learn about Australian wildlife, and the learning results are detected by interactive game mode to ensure the quality of children's learning.</p>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -303,8 +317,8 @@ password=prompt('Please enter your password to view this page!','');
                     <span class="wrap-icon">
                         <span class="icon-paw"></span>
                     </span>
-                    <h2>Wild Learn</h2>
-                    <p>Wild HomeLearn is a non-profit online learning platform focusing on Australian ecosystems. We are committed to helping people learn about Australia's wildlife through our free policy. We focus on helping children living in Australia learn about their native wild animals and camping. Therefore we ensure the best qualit of knowledge to you.</p>
+                    <h2 class="text-cursive">Wild Learn</h2>
+                    <p class="text-cursive">Wild HomeLearn is a non-profit online learning platform focusing on Australian ecosystems. We are committed to helping people learn about Australia's wildlife through our free policy. We focus on helping children living in Australia learn about their native wild animals and camping. Therefore we ensure the best qualit of knowledge to you.</p>
                 </div>
             </div>
         </div>
@@ -315,9 +329,8 @@ password=prompt('Please enter your password to view this page!','');
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 text-center">
-                <span class="text-cursive h5 text-red d-block">Lets look how many animals actually are their in Australia..</span>
-                <h2 class="text-black">What numbers says? Lets find out..*</h2>
-                <p class="text-dark">*Real numbers coming soon(Demo version)</p>
+                <span class="text-cursive h2 text-red d-block">Lets look how many animals actually are their in Australia..</span>
+                <h2 class="text-red text-cursive">What numbers says? Lets find out..</h2>
             </div>
         </div>
         <div class="row text-center">

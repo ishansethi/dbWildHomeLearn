@@ -230,20 +230,14 @@
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 text-center">
-                <span class="text-cursive h2 text-white d-block">Here are your weather details...Just type the desired place.</span>
+                <span class="text-cursive h2 text-white d-block">Here are your - weather details...</span>
                 <br />
             </div>
-            <div>
-                <h3>Enter location name:</h3>
-                <input id="awxSearchTextBox" placeholder="st Kilda" />
-                <input id="awxSearchButton" class="btn-danger" type="submit" value="Search" />
-            </div>
-            <hr>
-            <h3>Current Conditions</h3>
-            <ul>
-                <li><span id="awxWeatherInfo"></span>
-            </ul>
         </div>
+        <a class="weatherwidget-io" href="https://forecast7.com/en/n37d81144d96/melbourne/" data-label_1="MELBOURNE" data-label_2="WEATHER" data-theme="original">MELBOURNE WEATHER</a>
+        <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+        </script>
     </div>
 </div>
 

@@ -50,6 +50,12 @@ namespace HomeWildLearn.Controllers
 
             return View();
         }
+        public ActionResult TestPageIndex()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
 
         public ActionResult Kids()
         {
@@ -58,6 +64,12 @@ namespace HomeWildLearn.Controllers
             return View();
         }
         public ActionResult Parents()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+        public ActionResult MigrateTest()
         {
             ViewBag.Message = "Your application description page.";
 

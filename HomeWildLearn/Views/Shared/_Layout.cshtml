@@ -24,143 +24,148 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body>
 
-    <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-        <div class="site-mobile-menu site-navbar-target">
-            <div class="site-mobile-menu-header">
-                <div class="site-mobile-menu-close mt-3">
-                    <span class="icon-close2 js-menu-toggle"></span>
-                </div>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+   
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
             </div>
-            <div class="site-mobile-menu-body"></div>
         </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
 
-        <header class="site-navbar site-navbar-target" role="banner">
-            <div class="container mb-3">
-                <div class="d-flex align-items-center">
+    <header class="site-navbar site-navbar-target" role="banner">
+        <div class="container mb-3">
+            <div class="d-flex align-items-center">
 
-                    @*<div class="site-quick-contact d-none d-lg-flex ml-auto ">
+                @*<div class="site-quick-contact d-none d-lg-flex ml-auto ">
                         <div class="d-flex site-info align-items-center">
                             <span class="block-icon mr-3"><span class="icon-user-o"></span></span>
                             <span>@Html.Partial("_LoginPartial")</span>
                         </div>
                     </div>*@
-                </div>
             </div>
-            <div class="container">
-                <div class="menu-wrap d-flex align-items-center">
-                    <span class="d-inline-block d-lg-none"><a href="#" class="text-black site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-black"></span></a></span>
-                    <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
-                        <ul class="site-menu main-menu js-clone-nav mr-auto ">
-                            <li class="active"><a href="@Url.Action("Index", "Home" )" class="nav-link"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                                    <i class="fa fa-gamepad" aria-hidden="true"></i>
-                                    Playfield
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="@Url.Action("Index", "Animals1" )">
-                                        <i class="fa fa-binoculars" aria-hidden="true"></i>
-                                        Explore Wild-Animals
-                                    </a>
-                                    <a class="dropdown-item" href="@Url.Action("Index", "wildlife_locations" )"><i class="fa fa-globe" aria-hidden="true"></i> Animals Around Me!</a>
-                                    <a class="dropdown-item" href="@Url.Action("QuizTest", "Home" )"><i class="fa fa-question" aria-hidden="true"></i> Let's Test Your Knowledge</a>
-                                    <a class="dropdown-item" href="@Url.Action("InterestingFacts", "Home" )"><i class="fa fa-search" aria-hidden="true"></i> Interesting Facts and Get Aware</a>
-                                    <a class="dropdown-item" href="@Url.Action("WhereTo", "Home" )"><i class="fa fa-tree" aria-hidden="true"></i> Where to go now? Zoo, forest or park?</a>
-                                    <a class="dropdown-item" href="@Url.Action("LetsMigrate", "Home" )"><i class="fa fa-earlybirds" aria-hidden="true"></i> Wondering how animals Migrate?</a>
-
-                                    <a class="dropdown-item" href="@Url.Action("LearnCamping", "Home" )">
-                                        <i class="fa fa-free-code-camp" aria-hidden="true"></i>
-                                        Learn Camping
-                                    </a>
-                                    <a class="dropdown-item" href="@Url.Action("Index", "Blogs" )"><i class="fa fa-pencil" aria-hidden="true"></i> Wild-Kids Blogs</a>
-                                </div>
-                            </li>
-                            <li><a href="@Url.Action("Parents", "Home" )" class="nav-link">
-    <i class="fa fa-male" aria-hidden="true"></i>
-     Parents
-</a></li>
-                            <li><a href="@Url.Action("About", "Home" )" class="nav-link">
-    <i class="fa fa-info" aria-hidden="true"></i>
-     About Us
-</a></li>
-                        </ul>
-                    </nav>
-                    <body onload="myFunction1()">
-
-                        <iframe id="homelearn" src="" width="83" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                    </body>
-                </div>
-            </div>
-        </header>
-        <div class="">
-            @RenderBody()
-
-            <footer class="site-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="footer-heading mb-3">Our Motto</h2>
-                            <p class="mb-5">"A virtual bridge between you and nature"</p>
-
-                        </div>
-                        <div class="col-lg-8 ml-auto">
-                            <div class="row">
-                                <div class="col-lg-4 ml-auto">
-                                    <h2 class="footer-heading mb-4">Site Navigation</h2>
-                                    <ul class="list-unstyled">
-                                        <li><a href="@Url.Action("Index", "Home" )">Home</a></li>
-                                        <li><a href="@Url.Action("Parents", "Home" )">Parents</a></li>
-                                        <li><a href="@Url.Action("About", "Home" )">About Us</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row pt-5 mt-5 text-center">
-                        <div class="col-md-12">
-                            <div class="border-top pt-5">
-                                <p class="pull-right"><a href="#">Back to top</a></p>
-                                <p>&copy;  @DateTime.Now.Year - Wild-HomeLearn &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
         </div>
+        <div class="container">
+            <div class="menu-wrap d-flex align-items-center">
+                <span class="d-inline-block d-lg-none"><a href="#" class="text-black site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-black"></span></a></span>
+                <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
+                    <ul class="site-menu main-menu js-clone-nav mr-auto ">
+                        <li class="active"><a href="@Url.Action("Index", "Home" )" class="nav-link"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
 
-        <script language="javascript">
-                                // XSS attack code prevention by TIM
-                                    < !--
-                                if (self != top)
-                    -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                <i class="fa fa-gamepad" aria-hidden="true"></i>
+                                Playfield
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="@Url.Action("Index", "Animals1" )">
+                                    <i class="fa fa-binoculars" aria-hidden="true"></i>
+                                    Explore Wild-Animals
+                                </a>
+                                <a class="dropdown-item" href="@Url.Action("Index", "wildlife_locations" )"><i class="fa fa-globe" aria-hidden="true"></i> Animals Around Me!</a>
+                                <a class="dropdown-item" href="@Url.Action("QuizTest", "Home" )"><i class="fa fa-question" aria-hidden="true"></i> Let's Test Your Knowledge</a>
+                                <a class="dropdown-item" href="@Url.Action("InterestingFacts", "Home" )"><i class="fa fa-search" aria-hidden="true"></i> Interesting Facts and Get Aware</a>
+                                <a class="dropdown-item" href="@Url.Action("WhereTo", "Home" )"><i class="fa fa-tree" aria-hidden="true"></i> Where to go now? Zoo, forest or park?</a>
+                                <a class="dropdown-item" href="@Url.Action("MigrateTest", "Home" )"><i class="fa fa-globe" aria-hidden="true"></i> Wondering how animals Migrate?</a>
 
-        </script>
-        <script>
-            function myFunction1() {
-                var x = document.URL;
-                document.getElementById("homelearn").src = 'https://www.facebook.com/plugins/share_button.php?href=' + x + '&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId';
+                                <a class="dropdown-item" href="@Url.Action("LearnCamping", "Home" )">
+                                    <i class="fa fa-free-code-camp" aria-hidden="true"></i>
+                                    Learn Camping
+                                </a>
+                                <a class="dropdown-item" href="@Url.Action("Index", "Blogs" )"><i class="fa fa-pencil" aria-hidden="true"></i> Wild-Kids Blogs</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Parents", "Home" )" class="nav-link">
+                                <i class="fa fa-male" aria-hidden="true"></i>
+                                Parents
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("About", "Home" )" class="nav-link">
+                                <i class="fa fa-info" aria-hidden="true"></i>
+                                About Us
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <body onload="myFunction1()">
 
-            }
-        </script>
-        <script src="~/Scripts/jquery-3.3.1.min.js"></script>
-        <script src="~/Scripts/jquery-migrate-3.0.0.js"></script>
-        <script src="~/Scripts/popper.min.js"></script>
-        <script src="~/Scripts/bootstrap.min.js"></script>
-        <script src="~/Scripts/owl.carousel.min.js"></script>
-        <script src="~/Scripts/jquery.sticky.js"></script>
-        <script src="~/Scripts/jquery.waypoints.min.js"></script>
-        <script src="~/Scripts/jquery.animateNumber.min.js"></script>
-        <script src="~/Scripts/jquery.fancybox.min.js"></script>
-        <script src="~/Scripts/jquery.stellar.min.js"></script>
-        <script src="~/Scripts/jquery.easing.1.3.js"></script>
-        <script src="~/Scripts/bootstrap-datepicker.min.js"></script>
-        <script src="~/Scripts/aos.js"></script>
-        <script src="~/Scripts/main.js"></script>
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
-    </body>
+                    <iframe id="homelearn" src="" width="83" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </body>
+            </div>
+        </div>
+    </header>
+    <div class="">
+        @RenderBody()
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2 class="footer-heading mb-3">Our Motto</h2>
+                        <p class="mb-5">"A virtual bridge between you and nature"</p>
+
+                    </div>
+                    <div class="col-lg-8 ml-auto">
+                        <div class="row">
+                            <div class="col-lg-4 ml-auto">
+                                <h2 class="footer-heading mb-4">Site Navigation</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="@Url.Action("Index", "Home" )">Home</a></li>
+                                    <li><a href="@Url.Action("Parents", "Home" )">Parents</a></li>
+                                    <li><a href="@Url.Action("About", "Home" )">About Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-5 mt-5 text-center">
+                    <div class="col-md-12">
+                        <div class="border-top pt-5">
+                            <p class="pull-right"><a href="#">Back to top</a></p>
+                            <p>&copy;  @DateTime.Now.Year - Wild-HomeLearn &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script language="javascript">
+                                        // XSS attack code prevention by TIM
+                                            < !--
+                                        if (self != top)
+                -->
+
+    </script>
+    <script>
+        function myFunction1() {
+            var x = document.URL;
+            document.getElementById("homelearn").src = 'https://www.facebook.com/plugins/share_button.php?href=' + x + '&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId';
+
+        }
+    </script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-migrate-3.0.0.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <script src="~/Scripts/jquery.sticky.js"></script>
+    <script src="~/Scripts/jquery.waypoints.min.js"></script>
+    <script src="~/Scripts/jquery.animateNumber.min.js"></script>
+    <script src="~/Scripts/jquery.fancybox.min.js"></script>
+    <script src="~/Scripts/jquery.stellar.min.js"></script>
+    <script src="~/Scripts/jquery.easing.1.3.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.min.js"></script>
+    <script src="~/Scripts/aos.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
 </html>
