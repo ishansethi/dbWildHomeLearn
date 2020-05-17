@@ -1803,10 +1803,14 @@ h1, h2, h3, h4, h5,
     color: rgba(255, 255, 255, 0.7); }
   .block-2.red,
   .block-2.red .wrap-icon {
-    background-color: #fd4d40; }
+    background-color: #fd4d40;
+    border-radius: 25px;
+  }
   .block-2.yellow,
   .block-2.yellow .wrap-icon {
-    background-color: #fdb62f; }
+    background-color: #fdb62f;
+    border-radius: 25px;
+  }
   .block-2.teal,
   .block-2.teal .wrap-icon {
     background-color: #16c3b0; }

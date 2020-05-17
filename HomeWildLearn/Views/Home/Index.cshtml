@@ -140,7 +140,7 @@ password=prompt('Please enter your password to view this page!','');
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3">
+            @*<div class="col-lg-3">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/pawprint.svg" alt="Image" class="img-fluid"></span>
                     <h3>Animals Around Me !</h3>
@@ -152,8 +152,8 @@ password=prompt('Please enter your password to view this page!','');
                         </a>
                     </p>
                 </div>
-            </div>
-            <div class="col-lg-3">
+            </div>*@
+            <div class="col-lg-4">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/australia.svg" alt="Image" class="img-fluid"></span>
                     <h3>Explore Wild-Animals</h3>
@@ -166,7 +166,7 @@ password=prompt('Please enter your password to view this page!','');
                     </p>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/test.svg" alt="Image" class="img-fluid"></span>
                     <h3>Check your knowledge </h3>
@@ -174,18 +174,18 @@ password=prompt('Please enter your password to view this page!','');
                     <p>
                         <a href="@Url.Action("QuizTest")" class="btn btn-primary btn-custom-1 mt-4">
                             <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
-                            Lets Explore!!
+                            Quiz Time 
                         </a>
                     </p>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/birds.svg" alt="Image" class="img-fluid"></span>
                     <h3>How animals Migrate?</h3>
                     <p class="text-cursive">Wondering how animals migrate? </p>
                     <p>
-                        <a href="@Url.Action("LetsMigrate")" class="btn btn-primary btn-custom-1 mt-4">
+                        <a href="@Url.Action("MigrateTest")" class="btn btn-primary btn-custom-1 mt-4">
                             <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
                             Lets Explore!!
                         </a>
@@ -195,10 +195,10 @@ password=prompt('Please enter your password to view this page!','');
         </div>
         <hr>
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/search.svg" alt="Image" class="img-fluid"></span>
-                    <h3>Interesting Facts and Get Aware</h3>
+                    <h3>Interesting Facts</h3>
                     <p class="text-cursive"> Learn some cool facts about wildlife with the awareness.</p>
                     <p>
                         <a href="@Url.Action("InterestingFacts")" class="btn btn-primary btn-custom-1 mt-4">
@@ -208,7 +208,7 @@ password=prompt('Please enter your password to view this page!','');
                     </p>
                 </div>
             </div>
-            <div class="col-lg-3">
+            @*<div class="col-lg-3">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/forest.svg" alt="Image" class="img-fluid"></span>
                     <h3>Where to go Zoo, Forest or Park</h3>
@@ -220,8 +220,8 @@ password=prompt('Please enter your password to view this page!','');
                         </a>
                     </p>
                 </div>
-            </div>
-            <div class="col-lg-3">
+            </div>*@
+            <div class="col-lg-4">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/camping-tent.svg" alt="Image" class="img-fluid"></span>
                     <h3>Want to learn "CAMPING?"</h3>
@@ -229,12 +229,12 @@ password=prompt('Please enter your password to view this page!','');
                     <p>
                         <a href="@Url.Action("LearnCamping")" class="btn btn-primary btn-custom-1 mt-4">
                             <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
-                            Lets Explore!!
+                            Lets camp!!
                         </a>
                     </p>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/blogging.svg" alt="Image" class="img-fluid"></span>
                     <h3>Checkout your mates experiences.</h3>
@@ -242,7 +242,7 @@ password=prompt('Please enter your password to view this page!','');
                     <p>
                         <a href="@Url.Action("Index", "Blogs")" class="btn btn-primary btn-custom-1 mt-4">
                             <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
-                            Lets Explore!!
+                            Lets Write!!
                         </a>
                     </p>
                 </div>
@@ -268,7 +268,7 @@ password=prompt('Please enter your password to view this page!','');
                                 <img src="~/Content/images/koalas.jpg" alt="Image" class="vcard img-fluid">
                             </div>
                             <div class="text">
-                                <h3>Koala</h3>
+                                <h3><a href="https://wildhomelearn.ml/wildlife_details/Details/2" style="color:yellow;">Koala</a></h3>
                                 <p>Due to Koala's cuteness its the most searched animal on our website.</p>
                             </div>
                         </div>
@@ -277,7 +277,7 @@ password=prompt('Please enter your password to view this page!','');
                                 <img src="~/Content/images/animals/Quokka.jpg" alt="Image" class="vcard img-fluid">
                             </div>
                             <div class="text">
-                                <h3>Quokka</h3>
+                                <h3><a href="https://wildhomelearn.ml/wildlife_details/Details/4" style="color:yellow;">Quokka</a></h3>
                                 <p>Always smiling....Its the second most searched animal on WildHomeLearn</p>
                             </div>
                         </div>
@@ -286,7 +286,7 @@ password=prompt('Please enter your password to view this page!','');
                                 <img src="~/Content/images/animals/kangaroo.jpg" alt="Image" class="vcard img-fluid">
                             </div>
                             <div class="text">
-                                <h3>Kangaroo</h3>
+                                <h3><a href="https://wildhomelearn.ml/wildlife_details/Details/1" style="color:yellow;">Kangaroo</a></h3>
                                 <p>Lets do HOP! HOP!...being the native animal of Australia, its the third most searced animal around here.</p>
                             </div>
                         </div>
@@ -337,15 +337,15 @@ password=prompt('Please enter your password to view this page!','');
             <div class="col">
                 <div class="counter">
                     <i class="fa fa-map-marker fa-2x"></i>
-                    <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
+                    <h2 class="timer count-title count-number" data-to="300000" data-speed="1500"></h2>
                     <p class="count-text ">Number of species</p>
                 </div>
             </div>
             <div class="col">
                 <div class="counter">
                     <i class="fa fa-map-marker fa-2x"></i>
-                    <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2>
-                    <p class="count-text ">Hectares of area</p>
+                    <h2 class="timer count-title count-number" data-to="134" data-speed="1500"></h2>
+                    <p class="count-text ">Million Hectares of area</p>
                 </div>
             </div>
             <div class="col">

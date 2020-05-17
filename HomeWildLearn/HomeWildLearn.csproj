@@ -413,6 +413,7 @@
     <Content Include="css\newquiz.css" />
     <Content Include="css\quiz.css" />
     <Content Include="css\TestPage.css" />
+    <Content Include="css\testpageindex.css" />
     <Content Include="favicon.ico" />
     <Content Include="Content\fonts\flaticon\backup.txt" />
     <Content Include="Content\fonts\flaticon\font\flaticon.css" />
@@ -655,6 +656,7 @@
     <Content Include="Content\scss\_site-base.scss" />
     <Content Include="Content\scss\_site-blocks.scss" />
     <Content Include="Content\scss\_site-navbar.scss" />
+    <Content Include="Scripts\Testpage.js" />
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />
     <Content Include="webfonts\fa-solid-900.svg" />
