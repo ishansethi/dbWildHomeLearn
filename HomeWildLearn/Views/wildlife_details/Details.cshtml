@@ -336,20 +336,22 @@
 </div>
 <!-- /.row -->
 <!-- Call to Action Well -->
-<div class="card text-white bg-secondary my-5 py-0 text-center rounded">
-    <div class="card-body">
-        <p class="text-white m-0">Read fun facts about @Html.DisplayFor(model => model.Animal.animal_name)</p>
-    </div>
-</div>
+@*<div class="card text-white bg-secondary my-5 py-0 text-center rounded">
+        <div class="card-body">
+            <p class="text-white m-0 text-cursive">Read fun facts about @Html.DisplayFor(model => model.Animal.animal_name)</p>
+        </div>
+    </div>*@
+<div class="dropdown-divider"></div>
+
 <!-- Content Row -->
 <div class="row mx-1">
     <div class="col-md-3 mb-5">
         <div class="card h-100 bg-warning text-center">
             <div class="card-body">
                 <article class="fact1">
-                    <h2 class="card-title">Fact 1</h2>
+                    <h2 class="card-title text-white">Fun Fact</h2>
                     @*<p class="card-text">@Html.Raw(@Html.DisplayFor(model => model.Fact_1).ToHtmlString())</p>*@
-                    <p class="card-text">@Html.Raw(Model.Fact_1)</p>
+                    <p class="card-text text-white">@Html.Raw(Model.Fact_1)</p>
                 </article>
             </div>
             <div class="card-footer">
@@ -364,8 +366,8 @@
         <div class="card h-100 badge-success text-center">
             <div class="card-body">
                 <article class="fact2">
-                    <h2 class="card-title">Fun Fact 2</h2>
-                    <p class="card-text">@Html.DisplayFor(model => model.Fact_2)</p>
+                    <h2 class="card-title text-white">Fun Fact</h2>
+                    <p class="card-text text-white">@Html.DisplayFor(model => model.Fact_2)</p>
                 </article>
             </div>
             <div class="card-footer">
@@ -379,8 +381,8 @@
     <div class="col-md-3 mb-5" id="sec2">
         <div class="card h-100 bg-info text-center">
             <div class="card-body">
-                <h2 class="card-title">Listen to a @Html.DisplayFor(model => model.Animal.animal_name)</h2>
-                <p class="card-text">Does it roar?</p>
+                <h2 class="card-title text-white">Listen to a @Html.DisplayFor(model => model.Animal.animal_name)</h2>
+                <p class="card-text text-white">Does it roar?</p>
             </div>
             <div class="card-footer">
                 <audio id="nyan" src="@Html.DisplayFor(model => model.Animal_Sound)" preload="metadata" type="audio/mpeg">
@@ -396,9 +398,9 @@
     <div class="col-md-3 mb-5">
         <div class="card h-100 bg-teal text-center">
             <div class="card-body">
-                <h2 class="card-title">Find Me!</h2>
+                <h2 class="card-title text-white">Find Me!</h2>
                 <span class=""><img src="https://image.flaticon.com/icons/svg/664/664554.svg" alt="Image" width="300" height="150"></span>
-                <p class="card-text">Click the button below. Is there one in your backyard?!</p>
+                <p class="card-text text-white">Click the button below. Is there one in your backyard?!</p>
             </div>
             <div class="card-footer">
                 @Html.ActionLink("Find " + @Html.DisplayFor(model => model.Animal.animal_name) + "s", "IndividualLocation", "wildlife_locations", new { animalName = Model.Animal.animal_name }, new { @class = "btn btn-primary btn-sm" })

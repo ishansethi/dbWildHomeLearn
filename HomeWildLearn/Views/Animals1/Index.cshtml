@@ -64,7 +64,7 @@
         bottom: 0px;
         width: 100%;
         z-index: -10;
-        bb
+        
     }
 
     .ct-btn-scroll {
@@ -101,7 +101,7 @@
 <div class="site-section py-5 bg-warning" id="sec1">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 d-flex align-self-center">
+            <div class="col-md-12 d-flex align-self-center justify-content-center">
                 <h1 class="text-cursive text-white m-0 ">
                     Hey Kids!! Explore and Search wild life animals !!
                 </h1>
@@ -127,7 +127,6 @@
     </form>
 </nav>
 <div class="row align-items-center justify-content-center text-cursive">
-    <h2 class="text-cursive">What kind of animals do you wanna see?</h2>
     <div class="checkbox h2 mx-1 pt-3">
         <label><input type="checkbox" value="Mammal" data-filter-type="class">Mammal</label>
     </div>
@@ -151,17 +150,19 @@
                     </div>
                     <div class="card card-shadow text-center col-md-3 mb-4" data-class="@Html.DisplayFor(modelItem => item.animal_class)">
                         <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.animal_explore_image)" alt="Card image cap" style="width:215px; height:144px;">                        <div class="card-body">
-                            <h4 class="card-title">@Html.DisplayFor(modelItem => item.animal_name)</h4>
-                            <p class="card-text animal-type">Type: @Html.DisplayFor(modelItem => item.animal_class)</p>
-                            <div class="dropdown-divider"></div>
-                            <p class="card-text">
-                                <small class="text-muted"></small>
-                            </p>
-                            <a href="#">
-                                @Html.ActionLink("About me!", "Details", "wildlife_details", new { id = item.animal_id }, new { @class = "btn btn-primary btn-sm" })
+    <h4 class="card-title">@Html.DisplayFor(modelItem => item.animal_name)</h4>
+    <p class="card-text animal-type">I am a @Html.DisplayFor(modelItem => item.animal_class)</p>
+    <div class="dropdown-divider"></div>
+    <i class="fa fa-hand-o-down" aria-hidden="true"></i>
 
-                            </a>
-                        </div>
+    <p class="card-text">
+        <small class="text-muted"></small>
+    </p>
+    <a href="#">
+        @Html.ActionLink("About me!", "Details", "wildlife_details", new { id = item.animal_id }, new { @class = "btn btn-primary btn-space btn-sm" })
+
+    </a>
+</div>
                     </div>
 
                 }
@@ -171,13 +172,15 @@
                         <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.animal_explore_image)" alt="Card image cap" style="width:215px; height:144px;">
                         <div class="card-body">
                             <h4 class="card-title">@Html.DisplayFor(modelItem => item.animal_name)</h4>
-                            <p class="card-text animal-type">Type: @Html.DisplayFor(modelItem => item.animal_class)</p>
+                            <p class="card-text animal-type">I am a @Html.DisplayFor(modelItem => item.animal_class)</p>
                             <div class="dropdown-divider"></div>
+                            <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+
                             <p class="card-text">
                                 <small class="text-muted"></small>
                             </p>
                             <a href="#">
-                                @Html.ActionLink("About me!", "Details", "wildlife_details", new { id = item.animal_id }, new { @class = "btn btn-primary btn-sm" })
+                                @Html.ActionLink("About me!", "Details", "wildlife_details", new { id = item.animal_id }, new { @class = "btn btn-primary btn-space btn-sm" })
                             </a>
                         </div>
                     </div>

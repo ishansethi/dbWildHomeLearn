@@ -23,11 +23,18 @@
     width: 33%;
     height: 100%;
     position: relative;
-    background: #3d504b;
+    background: #fff;
     border-radius: 16px;
     margin: 1%;
 }
-
+.column1 {
+    width: 33%;
+    height: 100%;
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    margin: 1%;
+}
 img {
     max-width: 100%;
     max-height: 100%;
@@ -48,13 +55,13 @@ h2 {
 }
 
 .cookie {
-    height: 20vh;
-    width: 20vh;
+    height: 15vh;
+    width: 10vh;
     margin: 0 auto;
     position: relative;
     /*   transition: filter 0.5s ease; */
 }
 
-/* .cookie:hover {
+ .cookie:hover {
 filter: drop-shadow(0 -5px 10px rgba(0,0,0,0.5));
-} */
+}
