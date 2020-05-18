@@ -78,9 +78,7 @@ map.on('load', function () {
             "icon-allow-overlap": true
         }
     }); */
-    map.addControl(new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken
-    }));;
+   
     map.addControl(new mapboxgl.NavigationControl());
 
     // Add geolocate control to the map.

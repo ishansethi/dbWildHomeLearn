@@ -1,7 +1,7 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
 body {
-    background: #7aa4a9;
+    background: #dde02e;
     font-family: 'Roboto Slab', serif;
     font-size: 18px;
     color: #f1f2ec;
@@ -16,7 +16,7 @@ body {
 }
 
 .mc_quiz {
-    color: #3a5336;
+    color: white;
     margin-bottom: 0px;
 }
 
@@ -105,6 +105,7 @@ button {
 }
 
 .resultBox h1 {
+    color: #f7f7f7;
 }
 
 .briefchart {

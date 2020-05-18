@@ -9,9 +9,6 @@
 <link href="~/css/details.css" rel="stylesheet">
 <style>
 
-
-
-
     .buttons {
         margin-top: 25px;
     }
@@ -27,29 +24,47 @@
     }
 
     #play {
-        background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play.svg);
+        /*background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play.svg);*/
+        background: url("https://image.flaticon.com/icons/svg/2468/2468825.svg") no-repeat top;
+        background-size: 70px 50px;
+        height: 70px;
+        width: 80px;
     }
 
         #play.played {
-            background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play1.svg);
+            background: url("https://image.flaticon.com/icons/svg/2468/2468801.svg") no-repeat top;
+            background-size: 70px 50px;
+            height: 70px;
+            width: 80px;
         }
 
     #pause {
-        background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause.svg);
+        background: url(https://image.flaticon.com/icons/svg/2468/2468816.svg) no-repeat top;
+        background-size: 70px 50px;
+        height: 70px;
+        width: 80px;
     }
 
         #pause.paused {
-            background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause1.svg);
+            background: url(https://image.flaticon.com/icons/svg/2468/2468794.svg) no-repeat top;
+            background-size: 70px 50px;
+            height: 70px;
+            width: 80px;
         }
 
     #stop {
-        background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop.svg);
+        background: url('../../Content/fonts/flaticon/stop-button.svg') no-repeat top;
+        background-size: 70px 50px;
+        height: 70px;
+        width: 80px;
     }
 
         #stop.stopped {
-            background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop1.svg);
+            background: url(https://image.flaticon.com/icons/svg/2468/2468884.svg) no-repeat top;
+            background-size: 70px 50px;
+            height: 70px;
+            width: 80px;
         }
-
 
     .media (max-width: 700px) {
         html
@@ -63,11 +78,7 @@
     }
 
     }
-
-
-
     /*  demo decor */
-
     #-demo-title {
         position: fixed;
         top: 0;
@@ -86,6 +97,7 @@
         height: 100%;
         opacity: .4;
     }
+
 
         #-demo-profile:hover {
             opacity: 1;
@@ -245,24 +257,30 @@
     <!-- Heading Row -->
     <div class="row align-items-center my-5">
         <div class="col-lg-7">
-            <img class="img-fluid rounded mb-4 mb-lg-0" src="@Html.DisplayFor(model => model.Animal_Image_Main)" style="width:634.98px; height: 423.15px;" alt="">
+            <img class="img-fluid rounded mb-4 mb-lg-0" src="@Html.DisplayFor(model => model.Animal_Image_Main)" alt="">
         </div>
         <!-- /.col-lg-8 -->
         <div class="col-lg-5">
+
+
+            <h1 class="font-weight-light">@Html.DisplayFor(model => model.Animal.animal_name)</h1>
+            <div class=buttons>
+                <button id=play><p class="mt-5">Listen!</p></button> &nbsp;
+                <button id=pause><p class="mt-5">Pause</p></button> &nbsp;
+                <button id=stop><p class="mt-5">Stop</p></button>
+            </div>
             <article>
-                <h1 class="font-weight-light">@Html.DisplayFor(model => model.Animal.animal_name)</h1>
-                <div class=buttons>
-                    <button id=play></button> &nbsp;
-                    <button id=pause></button> &nbsp;
-                    <button id=stop></button>
-                </div>
-                <p>@Html.DisplayFor(model => model.Animal.animal_desc)</p>
+                <p style="font-weight: bold; text-align:center"><br><b><u>About @Html.DisplayFor(model => model.Animal.animal_name)</u></b></p>
+                <p>@Html.Raw(Model.Animal.animal_desc)</p>
             </article>
             <div class="row">
-                <div class="col-md-6">
-                    <a class="btn btn-primary btn-space btn-sm mr-1 btn-block" data-toggle="modal" href="" data-target="#myModal">Picture Gallery</a>
-                    <button type="button" onclick="location.href='@Url.Action("ExportPDF","wildlife_details", new {id = "id"}).Replace("id", Model.Animal.animal_id.ToString())'" class="btn btn-primary btn-space btn-sm mr-1 btn-block">Download page</button>
+                <div class="col-md-12">
+                    <div style="display: inline-block">
+                        <a class="btn btn-primary btn-space btn-custom-1 mr-1" data-toggle="modal" href="" data-target="#myModal">Pictures!</a>
+                        <a href="#" onclick="location.href='@Url.Action("ExportPDF","wildlife_details", new {id = "id"}).Replace("id", Model.Animal.animal_id.ToString())'" class="btn btn-secondary btn-space btn-custom-1 mr-1">Download</a>
+                    </div>
                     <div class="container">
+
                         <!-- The Modal -->
                         <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
@@ -279,28 +297,35 @@
                                                 <div class="numbertext">1 / 5</div>
                                                 <img src="@Html.DisplayFor(model => model.Animal_Image_1)" style="width:100%">
                                             </div>
+
                                             <div class="mySlides">
                                                 <div class="numbertext">2 / 5</div>
                                                 <img src="@Html.DisplayFor(model => model.Animal_Image_2)" style="width:100%">
                                             </div>
+
                                             <div class="mySlides">
                                                 <div class="numbertext">3 / 5</div>
                                                 <img src="@Html.DisplayFor(model => model.Animal_Image_2)" style="width:100%">
                                             </div>
+
                                             <div class="mySlides">
                                                 <div class="numbertext">4 / 5</div>
                                                 <img src="@Html.DisplayFor(model => model.Animal_Image_4)" style="width:100%">
                                             </div>
+
                                             <div class="mySlides">
                                                 <div class="numbertext">5 / 5</div>
                                                 <img src="@Html.DisplayFor(model => model.Animal_Image_5)" style="width:100%">
                                             </div>
 
+
                                             <a class="prev" onclick="plusSlides(-1)">❮</a>
                                             <a class="next" onclick="plusSlides(1)">❯</a>
+
                                             <div class="caption-container">
                                                 <p id="caption"></p>
                                             </div>
+
                                             <div class="row">
                                                 <div class="column">
                                                     <img class="demo cursor" src="@Html.DisplayFor(model => model.Animal_Image_1)" style="width:100%" onclick="currentSlide(1)">
@@ -329,27 +354,24 @@
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </div>
     <!-- /.col-md-4 -->
 </div>
 <!-- /.row -->
 <!-- Call to Action Well -->
-@*<div class="card text-white bg-secondary my-5 py-0 text-center rounded">
-        <div class="card-body">
-            <p class="text-white m-0 text-cursive">Read fun facts about @Html.DisplayFor(model => model.Animal.animal_name)</p>
-        </div>
-    </div>*@
-<div class="dropdown-divider"></div>
-
+<div class="card text-white bg-warning my-5 py-0 text-center rounded">
+<p></p></div>
 <!-- Content Row -->
 <div class="row mx-1">
     <div class="col-md-3 mb-5">
-        <div class="card h-100 bg-warning text-center">
+        <div class="card h-100 bg-teal text-center">
             <div class="card-body">
                 <article class="fact1">
-                    <h2 class="card-title text-white">Fun Fact</h2>
+                    <h2 class="card-title text-white">Fun Fact 1</h2>
                     @*<p class="card-text">@Html.Raw(@Html.DisplayFor(model => model.Fact_1).ToHtmlString())</p>*@
                     <p class="card-text text-white">@Html.Raw(Model.Fact_1)</p>
                 </article>
@@ -366,8 +388,8 @@
         <div class="card h-100 badge-success text-center">
             <div class="card-body">
                 <article class="fact2">
-                    <h2 class="card-title text-white">Fun Fact</h2>
-                    <p class="card-text text-white">@Html.DisplayFor(model => model.Fact_2)</p>
+                    <h2 class="card-title text-white">Fun Fact 2</h2>
+                    <p class="card-text text-white">@Html.Raw(Model.Fact_2)</p>
                 </article>
             </div>
             <div class="card-footer">
@@ -375,6 +397,7 @@
                     Listen to this fact <i class="fa fa-play"></i>
                 </a>
             </div>
+
         </div>
     </div>
     <!-- /.col-md-4 -->
@@ -382,6 +405,7 @@
         <div class="card h-100 bg-info text-center">
             <div class="card-body">
                 <h2 class="card-title text-white">Listen to a @Html.DisplayFor(model => model.Animal.animal_name)</h2>
+                <span> <img src="https://image.flaticon.com/icons/svg/2590/2590162.svg" alt="Image" width="300" height="150"> </span>
                 <p class="card-text text-white">Does it roar?</p>
             </div>
             <div class="card-footer">
@@ -396,14 +420,15 @@
     </div>
     <!-- /.col-md-4 -->
     <div class="col-md-3 mb-5">
-        <div class="card h-100 bg-teal text-center">
+        <div class="card h-100 bg-warning text-center">
             <div class="card-body">
                 <h2 class="card-title text-white">Find Me!</h2>
                 <span class=""><img src="https://image.flaticon.com/icons/svg/664/664554.svg" alt="Image" width="300" height="150"></span>
                 <p class="card-text text-white">Click the button below. Is there one in your backyard?!</p>
             </div>
             <div class="card-footer">
-                @Html.ActionLink("Find " + @Html.DisplayFor(model => model.Animal.animal_name) + "s", "IndividualLocation", "wildlife_locations", new { animalName = Model.Animal.animal_name }, new { @class = "btn btn-primary btn-sm" })
+                <a class="btn btn-primary btn-sm" href="#quo">Find Me!</a>
+
             </div>
         </div>
     </div>
@@ -411,6 +436,52 @@
 </div>
 <!-- /.row -->
 <!-- /.container -->
+<!-- /.row -->
+<!-- /.container -->
+
+<div class="card text-white bg-warning my-5 py-0 text-center rounded">
+    <p></p>
+</div>
+
+
+<div class="container mt-3">
+    <!-- Heading Row -->
+    <div class="row align-items-center my-5">
+        <div class="col-lg-7">
+            <div class="block-2 red">
+                <span class="wrap-icon">
+                    <span class="icon-map-marker"></span>
+                </span>
+                <iframe width="400" height="400" frameborder="0" scrolling="no" src="/wildlife_locations/IndividualLocation?animalName=@Html.DisplayFor(model => model.Animal.animal_name)"></iframe>
+
+            </div>
+        </div>
+        <!-- /.col-lg-8 -->
+        <div class="col-lg-5">
+            <div class="block-2 yellow">
+                <span class="wrap-icon">
+                    <span class="icon-map-signs"></span>
+                </span>
+                <h2 class="text-white">Where we can find koalas ?</h2>
+                <p class="text align-le">&#8226; In Australia, Koalas are mainly found in these states</p>
+                <p class="text">&#8226; Victoria, NSW, WA</p>
+                <p class="text">They Migrate</p>
+
+
+            </div>
+
+           
+        </div>
+    </div>
+    <!-- /.col-md-4 -->
+</div>
+
+
+
+
+
+<hr>
+
 <div class="site-section py-5 badge-warning">
     <div class="container">
         <div class="row justify-content-center">

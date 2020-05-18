@@ -104,34 +104,8 @@
         @RenderBody()
 
         <footer class="site-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <h2 class="footer-heading mb-3">Our Motto</h2>
-                        <p class="mb-5">"A virtual bridge between you and nature"</p>
-
-                    </div>
-                    <div class="col-lg-8 ml-auto">
-                        <div class="row">
-                            <div class="col-lg-4 ml-auto">
-                                <h2 class="footer-heading mb-4">Site Navigation</h2>
-                                <ul class="list-unstyled">
-                                    <li><a href="@Url.Action("Index", "Home" )">Home</a></li>
-                                    <li><a href="@Url.Action("Parents", "Home" )">Parents</a></li>
-                                    <li><a href="@Url.Action("About", "Home" )">About Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row pt-5 mt-5 text-center">
-                    <div class="col-md-12">
-                        <div class="border-top pt-5">
-                            <p class="pull-right"><a href="#">Back to top</a></p>
-                            <p>&copy;  @DateTime.Now.Year - Wild-HomeLearn &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="container justify-content-center align-content-center">
+                <p>&copy;  @DateTime.Now.Year - Wild-HomeLearn &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
             </div>
         </footer>
     </div>
