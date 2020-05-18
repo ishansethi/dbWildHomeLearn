@@ -462,12 +462,9 @@
                 <span class="wrap-icon">
                     <span class="icon-map-signs"></span>
                 </span>
-                <h2 class="text-white">Where we can find koalas ?</h2>
-                <p class="text align-le">&#8226; In Australia, Koalas are mainly found in these states</p>
-                <p class="text">&#8226; Victoria, NSW, WA</p>
-                <p class="text">They Migrate</p>
+                <h2 class="text-white">Places where we can find @Html.DisplayFor(model => model.Animal.animal_name)s </h2>
 
-
+                @Html.Raw(Model.Animal_Location_details)         
             </div>
 
            
