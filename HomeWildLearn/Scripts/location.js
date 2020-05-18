@@ -32,32 +32,20 @@ $(".coordinates").each(function () {
     locations.push(point);
 });
 
-/*
-var data = [];
-for (i = 0; i < locations.length; i++) {
-    var feature = {
-        "type": "Feature",
-        "properties": {
-            "description": locations[i].description,
-            "icon": "theatre-15"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [locations[i].longitude, locations[i].latitude]
-        }
-    };
-    console.log(locations[i])
-    data.push(feature)
-}
-*/
 
 mapboxgl.accessToken = TOKEN;
+
+var bounds = [
+    [110.5215483, -46.731338], // Southwest coordinates
+    [156.9299, -10.424769], // Northeast coordinates
+];
 
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v10?optimize=true',
-    zoom: 7,
-    center: [locations[0].longitude, locations[0].latitude]
+    zoom: 6,
+    center: [145.003559, -37.852055],
+    maxBounds: bounds
 });
 
 map.on('load', function () {
@@ -118,9 +106,9 @@ map.on('load', function () {
                 var el = document.createElement('div');
                 el.id = 'marker-penguin';
             }
-            else if (locations[i].description == 'Emu') {
+            else if (locations[i].description == 'Humpback Whale') {
                 var el = document.createElement('div');
-                el.id = 'marker-emu';
+                el.id = 'marker-whale';
             }
 
 
