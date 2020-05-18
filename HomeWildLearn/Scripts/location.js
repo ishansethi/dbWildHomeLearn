@@ -32,24 +32,6 @@ $(".coordinates").each(function () {
     locations.push(point);
 });
 
-/*
-var data = [];
-for (i = 0; i < locations.length; i++) {
-    var feature = {
-        "type": "Feature",
-        "properties": {
-            "description": locations[i].description,
-            "icon": "theatre-15"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [locations[i].longitude, locations[i].latitude]
-        }
-    };
-    console.log(locations[i])
-    data.push(feature)
-}
-*/
 
 mapboxgl.accessToken = TOKEN;
 
