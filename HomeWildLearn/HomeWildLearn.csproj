@@ -809,6 +809,10 @@
     <Content Include="webfonts\fa-solid-900.woff" />
     <Content Include="webfonts\fa-solid-900.woff2" />
     <Content Include="Views\Shared\_Layout2.cshtml" />
+    <Content Include="Views\Home\TestPageIndex3.cshtml" />
+    <Content Include="Views\Home\TestPageIndex2.cshtml" />
+    <Content Include="Views\Home\TestPageIndex4.cshtml" />
+    <Content Include="Views\Home\TestPageIndex5.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

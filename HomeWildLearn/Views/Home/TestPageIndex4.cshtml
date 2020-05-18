@@ -54,15 +54,16 @@
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [135.683798, -27.059126],
-        zoom: 1
+        center: [144.962962, -37.865486],
+        zoom: 14
     });
 
     // San Francisco
-    var origin = [142.925082, -66.783249];
+    
+    var origin = [144.957673, -37.865910];
 
     // Washington DC
-    var destination = [148.534579, -42.682435];
+    var destination = [144.964787, -37.865097];
 
     // A simple line from origin to destination.
     var route = {
@@ -143,7 +144,7 @@
             'source': 'point',
             'type': 'symbol',
             'layout': {
-                'icon-image': 'aquarium-15',
+                'icon-image': 'parking-garage-15',
                 'icon-rotate': ['get', 'bearing'],
                 'icon-rotation-alignment': 'map',
                 'icon-allow-overlap': true,
