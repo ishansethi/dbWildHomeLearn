@@ -1,10 +1,9 @@
-﻿﻿﻿﻿@model IEnumerable<HomeWildLearn.Models.wildlife_locations>
+﻿﻿﻿﻿﻿@model IEnumerable<HomeWildLearn.Models.wildlife_locations>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout2.cshtml";
     //Layout = null;
 }
-
 @* This is for the mapbox map. *@
 <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js"></script>
 <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css" rel="stylesheet" />
@@ -12,6 +11,7 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.2.0/mapbox-gl-geocoder.min.js'></script>
 <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.2.0/mapbox-gl-geocoder.css' type='text/css' />
 <style>
+
     #marker-koala {
         background-image: url('https://image.flaticon.com/icons/svg/311/311519.svg');
         background-size: cover;
@@ -118,7 +118,6 @@
         }
     }
 </table>
-
 @section Scripts {
     @Scripts.Render("~/bundles/mapbox")
 }
