@@ -6,6 +6,11 @@
 
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="~/Content/style.css">
+
     <meta name="viewport" content="width=device-width" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
@@ -29,7 +34,78 @@
             <div class="bounce3"></div>
         </div>
     </div>
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
 
+    <header class="site-navbar site-navbar-target" role="banner">
+        <div class="container mb-3">
+            <div class="d-flex align-items-center">
+
+                @*<div class="site-quick-contact d-none d-lg-flex ml-auto ">
+                        <div class="d-flex site-info align-items-center">
+                            <span class="block-icon mr-3"><span class="icon-user-o"></span></span>
+                            <span>@Html.Partial("_LoginPartial")</span>
+                        </div>
+                    </div>*@
+            </div>
+        </div>
+        <div class="container">
+            <div class="menu-wrap d-flex align-items-center">
+                <span class="d-inline-block d-lg-none"><a href="#" class="text-black site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-black"></span></a></span>
+                <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
+                    <ul class="site-menu main-menu js-clone-nav mr-auto ">
+                        <li class="active"><a href="@Url.Action("Index", "Home" )" class="nav-link"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                <i class="fa fa-gamepad" aria-hidden="true"></i>
+                                Playfield
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="@Url.Action("Index", "Animals1" )">
+                                    <i class="fa fa-binoculars" aria-hidden="true"></i>
+                                    Explore Wild-Animals
+                                </a>
+                                @*<a class="dropdown-item" href="@Url.Action("Index", "wildlife_locations" )"><i class="fa fa-globe" aria-hidden="true"></i> Animals Around Me!</a>*@
+                                <a class="dropdown-item" href="@Url.Action("QuizTest", "Home" )"><i class="fa fa-question" aria-hidden="true"></i> Let's Test Your Knowledge</a>
+                                <a class="dropdown-item" href="@Url.Action("InterestingFacts", "Home" )"><i class="fa fa-search" aria-hidden="true"></i> Interesting Facts</a>
+                                @*<a class="dropdown-item" href="@Url.Action("WhereTo", "Home" )"><i class="fa fa-tree" aria-hidden="true"></i> Where to go now? Zoo, forest or park?</a>*@
+                                <a class="dropdown-item" href="@Url.Action("MigrateTest", "Home" )"><i class="fa fa-globe" aria-hidden="true"></i> Animal Migration</a>
+
+                                <a class="dropdown-item" href="@Url.Action("LearnCamping", "Home" )">
+                                    <i class="fa fa-free-code-camp" aria-hidden="true"></i>
+                                    Learn Camping
+                                </a>
+                                <a class="dropdown-item" href="@Url.Action("Index", "Blogs" )"><i class="fa fa-pencil" aria-hidden="true"></i> Wild-Kids Blogs</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Parents", "Home" )" class="nav-link">
+                                <i class="fa fa-male" aria-hidden="true"></i>
+                                Parents
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("About", "Home" )" class="nav-link">
+                                <i class="fa fa-info" aria-hidden="true"></i>
+                                About Us
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <body onload="myFunction1()">
+
+                    <iframe id="homelearn" src="" width="83" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </body>
+            </div>
+        </div>
+    </header>
     <header id="header" class="header">
         <div class="header-content">
             <div class="container">
@@ -123,38 +199,190 @@
 
                     <div class="grid">
                         <div class="element-item development">
-                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Online Banking</span></div><img src="~/MigrateCss/MigrateImages/project-1.jpg" alt="alternative"></a>
+                            <a class="popup-with-move-anim" href="#project-9"><div class="element-item-overlay"><span>Beluga Whale</span></div><img src="~/MigrateCss/MigrateImages/beluga.jpg" alt="alternative"></a>
                         </div>
                         <div class="element-item development">
-                            <a class="popup-with-move-anim" href="#project-2"><div class="element-item-overlay"><span>Classic Industry</span></div><img src="~/MigrateCss/MigrateImages/project-2.jpg" alt="alternative"></a>
+                            <a class="popup-with-move-anim" href="#project-10"><div class="element-item-overlay"><span>Blue Whale</span></div><img src="~/MigrateCss/MigrateImages/blow.jpg" alt="alternative"></a>
                         </div>
                         <div class="element-item design development marketing">
-                            <a class="popup-with-move-anim" href="#project-3"><div class="element-item-overlay"><span>BoomBap Audio</span></div><img src="~/MigrateCss/MigrateImages/project-3.jpg" alt="alternative"></a>
+                            <a class="popup-with-move-anim" href="#project-11"><div class="element-item-overlay"><span>Bowhead Whale</span></div><img src="~/MigrateCss/MigrateImages/bow.jpg" alt="alternative"></a>
                         </div>
                         <div class="element-item design development marketing">
-                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Van Moose</span></div><img src="~/MigrateCss/MigrateImages/project-4.jpg" alt="alternative"></a>
+                            <a class="popup-with-move-anim" href="#project-12"><div class="element-item-overlay"><span>Fin Whale</span></div><img src="~/MigrateCss/MigrateImages/fin.jpg" alt="alternative"></a>
                         </div>
                         <div class="element-item design development marketing seo">
-                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Joy Moments</span></div><img src="~/MigrateCss/MigrateImages/project-5.jpg" alt="alternative"></a>
+                            <a class="popup-with-move-anim" href="#project-13"><div class="element-item-overlay"><span>Humpback Whale</span></div><img src="~/MigrateCss/MigrateImages/hump.jpg" alt="alternative"></a>
                         </div>
                         <div class="element-item design marketing seo">
-                            <a class="popup-with-move-anim" href="#project-6"><div class="element-item-overlay"><span>Spark Events</span></div><img src="~/MigrateCss/MigrateImages/project-6.jpg" alt="alternative"></a>
+                            <a class="popup-with-move-anim" href="#project-14"><div class="element-item-overlay"><span>Killer Whale</span></div><img src="~/MigrateCss/MigrateImages/killer.jpg" alt="alternative"></a>
                         </div>
                         <div class="element-item design marketing">
-                            <a class="popup-with-move-anim" href="#project-7"><div class="element-item-overlay"><span>Casual Wear</span></div><img src="~/MigrateCss/MigrateImages/project-7.jpg" alt="alternative"></a>
+                            <a class="popup-with-move-anim" href="#project-15"><div class="element-item-overlay"><span>Northright Whale</span></div><img src="~/MigrateCss/MigrateImages/Northright.jpg" alt="alternative"></a>
                         </div>
                         <div class="element-item design marketing">
-                            <a class="popup-with-move-anim" href="#project-8"><div class="element-item-overlay"><span>Zazoo Apps</span></div><img src="~/MigrateCss/MigrateImages/project-8.jpg" alt="alternative"></a>
+                            <a class="popup-with-move-anim" href="#project-16"><div class="element-item-overlay"><span>Sei Whale</span></div><img src="~/MigrateCss/MigrateImages/sei.jpg" alt="alternative"></a>
                         </div>
                     </div> <!-- end of grid -->
                     <!-- end of filter -->
-
+                    <div id="project-9" class="lightbox-basic zoom-anim-dialog mfp-hide">
+                        <div class="row">
+                            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                            <div class="col-lg-8">
+                                <img class="img-fluid" src="~/MigrateCss/MigrateImages/beluga.jpg" alt="alternative">
+                            </div> <!-- end of col -->
+                            <div class="col-lg-4">
+                                <h3>Beluga Whale</h3>
+                                <hr class="line-heading">
+                                <div class="testimonial-container">
+                                    <p class="testimonial-text">The beluga whale is easily recognizable thanks to its stark white coloring and globular head. Belugas are very social animals.</p>
+                                </div>
+                                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of lightbox-basic -->
+                    <!-- end of lightbox -->
+                    <!-- Lightbox -->
+                    <div id="project-10" class="lightbox-basic zoom-anim-dialog mfp-hide">
+                        <div class="row">
+                            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                            <div class="col-lg-8">
+                                <img class="img-fluid" src="~/MigrateCss/MigrateImages/blow.jpg" alt="alternative">
+                            </div> <!-- end of col -->
+                            <div class="col-lg-4">
+                                <h3>Blue Whale</h3>
+                                <hr class="line-heading">
+                                <div class="testimonial-container">
+                                    <p class="testimonial-text">The Blue Whale is the largest animal ever to have lived on earth.</p>
+                                </div>
+                                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of lightbox-basic -->
+                    <!-- end of lightbox -->
+                    <!-- Lightbox -->
+                    <div id="project-11" class="lightbox-basic zoom-anim-dialog mfp-hide">
+                        <div class="row">
+                            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                            <div class="col-lg-8">
+                                <img class="img-fluid" src="~/MigrateCss/MigrateImages/bow.jpg" alt="alternative">
+                            </div> <!-- end of col -->
+                            <div class="col-lg-4">
+                                <h3>Bowhead Whale</h3>
+                                <hr class="line-heading">
+                                <div class="testimonial-container">
+                                    <p class="testimonial-text">The Bowhead Whale can grow up to 60ft (18m) in length and weighs up to 100 tonnes, making it the fifth-largest mammal on earth.</p>
+                                </div>
+                                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of lightbox-basic -->
+                    <!-- end of lightbox -->
+                    <!-- Lightbox -->
+                    <div id="project-12" class="lightbox-basic zoom-anim-dialog mfp-hide">
+                        <div class="row">
+                            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                            <div class="col-lg-8">
+                                <img class="img-fluid" src="~/MigrateCss/MigrateImages/fin.jpg" alt="alternative">
+                            </div> <!-- end of col -->
+                            <div class="col-lg-4">
+                                <h3>Fin Whale</h3>
+                                <hr class="line-heading">
+                                <div class="testimonial-container">
+                                    <p class="testimonial-text"> Fin whale is the second largest animal on the planet.It can reach 85 feet in length and 40 to 80 tons of weight</p>
+                                </div>
+                                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of lightbox-basic -->
+                    <!-- end of lightbox -->
+                    <!-- Lightbox -->
+                    <div id="project-13" class="lightbox-basic zoom-anim-dialog mfp-hide">
+                        <div class="row">
+                            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                            <div class="col-lg-8">
+                                <img class="img-fluid" src="~/MigrateCss/MigrateImages/hump.jpg" alt="alternative">
+                            </div> <!-- end of col -->
+                            <div class="col-lg-4">
+                                <h3>Humpback Whale</h3>
+                                <hr class="line-heading">
+                                <div class="testimonial-container">
+                                    <p class="testimonial-text"> Newborn humpback calves are about the length of their mother's head. Like a human fingerprint, the tail of each humpback whale is unique.</p>
+                                </div>
+                                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of lightbox-basic -->
+                    <!-- end of lightbox -->
+                    <!-- Lightbox -->
+                    <div id="project-14" class="lightbox-basic zoom-anim-dialog mfp-hide">
+                        <div class="row">
+                            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                            <div class="col-lg-8">
+                                <img class="img-fluid" src="~/MigrateCss/MigrateImages/killer.jpg" alt="alternative">
+                            </div> <!-- end of col -->
+                            <div class="col-lg-4">
+                                <h3>Killer Whale</h3>
+                                <hr class="line-heading">
+                                <div class="testimonial-container">
+                                    <p class="testimonial-text"> Orcas were given the name 'killer whale' by ancient sailors' observations of groups of orcas hunting and preying on larger whale species.</p>
+                                </div>
+                                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of lightbox-basic -->
+                    <!-- end of lightbox -->
+                    <!-- Lightbox -->
+                    <div id="project-15" class="lightbox-basic zoom-anim-dialog mfp-hide">
+                        <div class="row">
+                            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                            <div class="col-lg-8">
+                                <img class="img-fluid" src="~/MigrateCss/MigrateImages/Northright.jpg" alt="alternative">
+                            </div> <!-- end of col -->
+                            <div class="col-lg-4">
+                                <h3>Northright Whale</h3>
+                                <hr class="line-heading">
+                                <div class="testimonial-container">
+                                    <p class="testimonial-text"> North Atlantic right whales can live up to 70 years. </p>
+                                </div>
+                                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of lightbox-basic -->
+                    <!-- end of lightbox -->
+                    <!-- Lightbox -->
+                    <div id="project-16" class="lightbox-basic zoom-anim-dialog mfp-hide">
+                        <div class="row">
+                            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                            <div class="col-lg-8">
+                                <img class="img-fluid" src="~/MigrateCss/MigrateImages/sei.jpg" alt="alternative">
+                            </div> <!-- end of col -->
+                            <div class="col-lg-4">
+                                <h3>Sei Whale</h3>
+                                <hr class="line-heading">
+                                <div class="testimonial-container">
+                                    <p class="testimonial-text">Sei whale can reach 64 feet in length and 28 tons of weight. Females are slightly larger than males. Sei whale has dark, bluish grey back and light-colored belly. </p>
+                                </div>
+                                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div>
     <hr>
-    <div class="tabs" id="sec4">
+    <div class="site-section py-5 bg-success" id="sec1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 d-flex">
+                    <h1 class="text-cursive text-white m-0">
+                        Lets look at the map for migration patterns..
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe width="1280" height="720" src="https://www.powtoon.com/embed/eUQtBSTOnDu/" frameborder="0" ></iframe>    <div class="tabs" id="sec4">
         <div class="area-1">
             <div class="tabs-container">
                 <h2>Lets learn more about Penguin Migration...</h2>
