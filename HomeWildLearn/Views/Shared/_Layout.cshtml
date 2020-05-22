@@ -27,7 +27,7 @@
 
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-   
+
     <div class="site-mobile-menu site-navbar-target">
         <div class="site-mobile-menu-header">
             <div class="site-mobile-menu-close mt-3">
@@ -54,40 +54,57 @@
                 <span class="d-inline-block d-lg-none"><a href="#" class="text-black site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-black"></span></a></span>
                 <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
                     <ul class="site-menu main-menu js-clone-nav mr-auto ">
-                        <li class="active"><a href="@Url.Action("Index", "Home" )" class="nav-link"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                        <li class="active">
+                            <a href="@Url.Action("Index", "Home" )" class="nav-link">
+                                <img style="width:30px;height:30px" src="https://image.flaticon.com/icons/svg/2888/2888792.svg" class="mb-1" /> 
+                                Home
+                            </a>
+                        </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                                <i class="fa fa-gamepad" aria-hidden="true"></i>
+                                <img style="width:30px;height:30px" src="https://image.flaticon.com/icons/svg/2228/2228476.svg" class="mb-1" />
                                 Playfield
                             </a>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu" style="min-width: 230px">
                                 <a class="dropdown-item" href="@Url.Action("Index", "Animals1" )">
-                                    <i class="fa fa-binoculars" aria-hidden="true"></i>
-                                    Explore Wild-Animals
+                                    <img style="width:25px;height:25px" src="https://image.flaticon.com/icons/svg/1527/1527248.svg" class="mb-1" />
+                                    Explore Animals
                                 </a>
                                 @*<a class="dropdown-item" href="@Url.Action("Index", "wildlife_locations" )"><i class="fa fa-globe" aria-hidden="true"></i> Animals Around Me!</a>*@
-                                <a class="dropdown-item" href="@Url.Action("QuizTest", "Home" )"><i class="fa fa-question" aria-hidden="true"></i> Let's Test Your Knowledge</a>
-                                <a class="dropdown-item" href="@Url.Action("InterestingFacts", "Home" )"><i class="fa fa-search" aria-hidden="true"></i> Interesting Facts</a>
+                                <a class="dropdown-item" href="@Url.Action("QuizTest", "Home" )">
+                                    <img style="width:25px;height:25px" src="https://image.flaticon.com/icons/svg/1828/1828587.svg" class="mb-1" />
+                                    Test Your Knowledge
+                                </a>
+                                <a class="dropdown-item" href="@Url.Action("InterestingFacts", "Home" )">
+                                    <img style="width:25px;height:25px" src="https://image.flaticon.com/icons/svg/882/882988.svg" class="mb-1" />
+                                    Interesting Facts
+                                </a>
                                 @*<a class="dropdown-item" href="@Url.Action("WhereTo", "Home" )"><i class="fa fa-tree" aria-hidden="true"></i> Where to go now? Zoo, forest or park?</a>*@
-                                <a class="dropdown-item" href="@Url.Action("MigrateTest", "Home" )"><i class="fa fa-globe" aria-hidden="true"></i> Animal Migration</a>
+                                <a class="dropdown-item" href="@Url.Action("MigrateTest", "Home" )">
+                                    <img style="width:25px;height:25px" src="https://image.flaticon.com/icons/svg/2919/2919220.svg" class="mb-1" />
+                                    Animal Migration
+                                </a>
 
                                 <a class="dropdown-item" href="@Url.Action("LearnCamping", "Home" )">
-                                    <i class="fa fa-free-code-camp" aria-hidden="true"></i>
+                                    <img style="width:25px;height:25px" src="https://image.flaticon.com/icons/svg/1839/1839028.svg" class="mb-1" />
                                     Learn Camping
                                 </a>
-                                <a class="dropdown-item" href="@Url.Action("Index", "Blogs" )"><i class="fa fa-pencil" aria-hidden="true"></i> Wild-Kids Blogs</a>
+                                <a class="dropdown-item" href="@Url.Action("Index", "Blogs" )">
+                                    <img style="width:25px;height:25px" src="https://image.flaticon.com/icons/svg/526/526127.svg" class="mb-1" /> 
+                                    Wild-Kids Blogs
+                                </a>
                             </div>
                         </li>
-                        <li>
-                            <a href="@Url.Action("Parents", "Home" )" class="nav-link">
-                                <i class="fa fa-male" aria-hidden="true"></i>
-                                Parents
-                            </a>
-                        </li>
+                        @*<li>
+                                <a href="@Url.Action("Parents", "Home" )" class="nav-link">
+                                    <i class="fa fa-male" aria-hidden="true"></i>
+                                    Parents
+                                </a>
+                            </li>*@
                         <li>
                             <a href="@Url.Action("About", "Home" )" class="nav-link">
-                                <i class="fa fa-info" aria-hidden="true"></i>
+                                <img style="width:25px;height:25px" src="https://image.flaticon.com/icons/svg/1076/1076337.svg" class="mb-1"/>
                                 About Us
                             </a>
                         </li>
@@ -111,9 +128,9 @@
     </div>
 
     <script language="javascript">
-                                        // XSS attack code prevention by TIM
-                                            < !--
-                                        if (self != top)
+                                                                                        // XSS attack code prevention by TIM
+                                                                                            < !--
+                                                                                        if (self != top)
                 -->
 
     </script>
