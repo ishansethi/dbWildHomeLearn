@@ -290,7 +290,10 @@
     <Content Include="Content\images\camp\electronic device.png" />
     <Content Include="Content\images\camp\first aid bag.png" />
     <Content Include="Content\images\camp\fishing pole.png" />
+    <Content Include="Content\images\camp\kangaroo.gif" />
+    <Content Include="Content\images\camp\koala.gif" />
     <Content Include="Content\images\camp\matchstick.png" />
+    <Content Include="Content\images\camp\penguin.gif" />
     <Content Include="Content\images\camp\sleeping bag.png" />
     <Content Include="Content\images\camp\telescope.png" />
     <Content Include="Content\images\camp\unmbrella.png" />
