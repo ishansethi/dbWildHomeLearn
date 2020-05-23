@@ -55,21 +55,26 @@
                     <div class="connecting-line"></div>
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active">
-                            <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Ready for camping?">
+                            <h3 style=" display: block;text-align: center;" class="text-cursive">Ready for camping?</h3>
+                            <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab">
+
                                 <span class="round-tab">
+
                                     <i class="glyphicon glyphicon-tent"></i>
                                 </span>
                             </a>
                         </li>
                         <li role="presentation">
-                            <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Tools you requiure">
+                            <h3 style=" display: block;text-align: center;" class="text-cursive">Tools you require</h3>
+                            <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab">
                                 <span class="round-tab">
                                     <i class="glyphicon glyphicon-wrench"></i>
                                 </span>
                             </a>
                         </li>
                         <li role="presentation">
-                            <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Beware">
+                            <h3 style=" display: block;text-align: center;" class="text-cursive">Tips</h3>
+                            <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab">
                                 <span class="round-tab">
                                     <i class="glyphicon glyphicon-warning-sign"></i>
                                 </span>
@@ -77,7 +82,8 @@
                         </li>
 
                         <li role="presentation">
-                            <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Checklist">
+                            <h3 style=" display: block;text-align: center;" class="text-cursive">Checklist</h3>
+                            <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab">
                                 <span class="round-tab">
                                     <i class="glyphicon glyphicon-ok"></i>
                                 </span>
@@ -89,10 +95,10 @@
                     <div class="tab-content">
                         <div class="tab-pane active" role="tabpanel" id="step1">
                             @*<ul class="list-inline pull-right ">
-                                <li><button type="button" class="btn btn-danger  next-step">Next</button></li>
-                            </ul>*@
+                                    <li><button type="button" class="btn btn-danger  next-step">Next</button></li>
+                                </ul>*@
 
-                      
+
                             <div class="site-section">
                                 <div class="container">
                                     <div class="row">
@@ -121,8 +127,8 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="col-lg-12 align-content-center justify-content-center">
+
+                            <div class="col-lg-12 align-content-center justify-content-center" style="pointer-events:none;">
                                 <div class="block-2 teal">
                                     <span class="wrap-icon">
                                         <span class="icon-cloud"></span>
@@ -139,9 +145,9 @@
                         </div>
                         <div class="tab-pane" role="tabpanel" id="step2">
                             @*<ul class="list-inline pull-right">
-                                <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                <li><button type="button" class="btn btn-warning next-step">Next</button></li>
-                            </ul>*@
+                                    <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+                                    <li><button type="button" class="btn btn-warning next-step">Next</button></li>
+                                </ul>*@
 
                             <h1 style="color:black; text-align:center; font-family:cursive;">Know about the tools you will require..</h1>
                             <hr>
@@ -442,9 +448,9 @@
                         </div>
                         <div class="tab-pane" role="tabpanel" id="step3">
                             @*<ul class="list-inline pull-right">
-                                <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                <li><button type="button" class="btn btn-warning btn-info-full next-step">Next</button></li>
-                            </ul>*@
+                                    <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+                                    <li><button type="button" class="btn btn-warning btn-info-full next-step">Next</button></li>
+                                </ul>*@
                             <h1 style="color:black; text-align:center; font-family:cursive;">Be aware of the following things..</h1>
                             <hr>
                             <div class="container1">
@@ -614,8 +620,8 @@
                         </div>
 
                         <div class="tab-pane" role="tabpanel" id="complete">
-                            <h1>Lets begin packing for camping!!</h1>
-                            <h2>Drag the required things into the bag..</h2>
+                            <h1>Pack for camping! <span class="red-text">Drag</span> items you want into the bag </h1>
+                            <h2></h2>
                             <div class="container1">
                                 <div class="left-side-area column1">
                                     <div class="cookie" id="Tent">
@@ -651,15 +657,15 @@
                                 </div>
                             </div>
 
-                            <div id="toPrint" >
+                            <div id="toPrint">
                                 <h1>Your Checklist for Camping</h1>
-                                <ol id="checkList"></ol>                              
+                                <ol id="checkList"></ol>
                             </div>
 
 
-
-                            <h1> <button type="button" class="btn btn-warning" onclick="print_this('toPrint')">Download the list</button> </h1>
-
+                            <div id="wrapper">
+                                <button type="button" class="btn btn-danger" onclick="print_this('toPrint')">Print your camping list</button>
+                            </div>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -691,7 +697,10 @@
     window.print_this = function (id) {
         var prtContent = document.getElementById(id);
         var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
-        WinPrint.document.write('<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">');
+        WinPrint.document.write('<link rel="stylesheet" href="/Content/style.css">');
+        WinPrint.document.write('<link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">');
+
+        
         // To keep styling
         /*var file = WinPrint.document.createElement("link");
         file.setAttribute("rel", "stylesheet");
@@ -792,7 +801,7 @@
     var todos = [];
     function releaseCookie() {
         shakeJarAnimation().kill(0);
-        let jarBottom = $(window).height() - $('.jar').offset().top - $('.jar').height() * 0.7;
+        let jarBottom = $(window).height() - $('.jar').offset().top - $('.jar').height() * 0.70;
         let cookieBottom = $(window).height() - $(this.target).offset().top - $(this.target).height();
         let distance = (cookieBottom - jarBottom) + this.y + $(this.target).height() * 0.1;
         if (this.hitTest(jar, '90%')) {
@@ -808,10 +817,10 @@
             todos = todos.filter(function (item, index, inputArray) {
                 return inputArray.indexOf(item) == index;
             });
-            var item = document.createElement("p");
+            var item = document.createElement("li");
             for (var i = 0; i < todos.length; i++) {
                 //var listItem = document.createTextNode(todos[i]);
-                var p = document.createElement("p");
+                var p = document.createElement("li");
                 p.appendChild(document.createTextNode(todos[i]));
                 list.append(p);
             }
@@ -821,9 +830,9 @@
             todos = todos.filter(x => x !== this.target.id);
             var list = document.getElementById('checkList');
             list.innerHTML = ''; //resetting the list
-            var item = document.createElement("p");
+            var item = document.createElement("li");
             for (var i = 0; i < todos.length; i++) {
-                var p = document.createElement("p");
+                var p = document.createElement("li");
                 p.appendChild(document.createTextNode(todos[i]));
                 list.append(p);
             }
