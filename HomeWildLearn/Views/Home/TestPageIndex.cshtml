@@ -50,6 +50,7 @@
 
 <script>
 
+
     mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhaHJvb3FwYXRoYW4iLCJhIjoiY2sweHQ2cGI2MDkzMDNibzN1aDd2b3NxZCJ9.mkmi_lQe7LYTmNSsV8V8bw';
     var map = new mapboxgl.Map({
         container: 'map',
@@ -77,7 +78,7 @@
             }
         ]
     };
-
+    
     // A single point that animates along the route.
     // Coordinates are initially set to origin.
     var point = {
@@ -117,6 +118,11 @@
     var counter = 0;
 
     map.on('load', function () {
+        map.loadImage("/Content/images/migrate/whale.png", function (error, image) {
+
+            if (error) throw error;
+            map.addImage("custom-marker", image);
+        
         // Add a source and layer displaying a point which will be animated in a circle.
         map.addSource('route', {
             'type': 'geojson',
@@ -143,7 +149,7 @@
             'source': 'point',
             'type': 'symbol',
             'layout': {
-                'icon-image': 'aquarium-15',
+                'icon-image': 'custom-marker',
                 'icon-rotate': ['get', 'bearing'],
                 'icon-rotation-alignment': 'map',
                 'icon-allow-overlap': true,
@@ -199,7 +205,8 @@
         });
 
         // Start the animation.
-        animate(counter);
+            animate(counter);
+        });
     });
 
 </script>
