@@ -63,7 +63,7 @@ button {
 .viewchart:hover,
 .backBtn:hover,
 .replay:hover,
-.home:hover{
+.home:hover {
     letter-spacing: 0.8em;
 }
 
@@ -426,18 +426,49 @@ progress {
 }
 
 
-ul {
+ul#optionList {
     list-style-type: none;
     width: 220px;
     margin: auto;
     text-align: left;
 }
 
-li {
+    ul#optionList::after {
+        content: none;
+    }
+
+    ul#optionList::before {
+        content: none;
+    }
+
+div.answerOptions::after {
+    content: none;
+}
+
+div.answerOptions::before {
+    content: none;
+}
+
+* {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+    *:before,
+    *:after {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+li.myoptions {
     position: relative;
     padding: 10px;
     padding-left: 40px;
     height: 30px;
+    line-height: 1;
+    font-size: 1.5rem;
 }
 
 label {
