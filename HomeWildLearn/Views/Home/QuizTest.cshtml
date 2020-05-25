@@ -1,4 +1,5 @@
 ﻿@{
+    //Layout = "~/Views/Shared/_Layout.cshtml";
     Layout = null;
 }
 
@@ -504,7 +505,7 @@
                 Your browser does not support the audio element.
             </audio>
             <br>
-            <button onclick="location.href='@Url.Action("Index", "Home")'"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
+            <button class="home" onclick="location.href='@Url.Action("Index", "Home")'"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
             <div class="my-progress">
                 <progress class="my-progress-bar" min="0" max="100" value="0" step="9" aria-labelledby="my-progress-completion"></progress>
                 <p id="my-progress-completion" class="js-my-progress-completion sr-only" aria-live="polite">0% complete</p>
@@ -541,9 +542,9 @@
                     </div>
 
                     <div class="resultBtns">
-                        <button class="viewanswer">View Answers</button>
-                        <button onclick="location.href='@Url.Action("Index", "Home")'"><i class="fa fa-home" style="font-size:1em;"></i> <br /> Home</button>
-                        <button class="replay"><i class="fa fa-repeat" style="font-size:1em;"></i> <br />Replay</button>
+                        <button class="viewanswer">Answers</button>
+                        <button class="home" onclick="location.href='@Url.Action("Index", "Home")'"><i class="fa fa-home" style="font-size:1em;"></i>Home</button>
+                        <button class="replay"><i class="fa fa-repeat" style="font-size:1em;"></i>Replay</button>
                     </div>
                 </div>
 

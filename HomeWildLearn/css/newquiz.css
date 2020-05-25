@@ -45,7 +45,7 @@ body {
 
 button {
     height: 4em;
-    width: 130px;
+    width: 140px;
     padding: 1.5em auto;
     margin: 1em auto;
     background-color: #f1f2ec;
@@ -62,7 +62,8 @@ button {
 .viewanswer:hover,
 .viewchart:hover,
 .backBtn:hover,
-.replay:hover {
+.replay:hover,
+.home:hover{
     letter-spacing: 0.8em;
 }
 
