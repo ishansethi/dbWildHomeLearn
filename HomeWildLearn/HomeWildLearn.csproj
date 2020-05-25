@@ -301,6 +301,7 @@
     <Content Include="Content\images\fact1.png" />
     <Content Include="Content\images\facts2.jpg" />
     <Content Include="Content\images\flaticon\svg\blogging.svg" />
+    <Content Include="Content\images\flaticon\svg\camping-tent.svg" />
     <Content Include="Content\images\flaticon\svg\test.svg" />
     <Content Include="Content\images\gallery\emu1.jpg" />
     <Content Include="Content\images\gallery\emu2.jpg" />
@@ -338,7 +339,7 @@
     <Content Include="Content\images\flaticon\svg\006-research.svg" />
     <Content Include="Content\images\flaticon\svg\australia.svg" />
     <Content Include="Content\images\flaticon\svg\birds.svg" />
-    <Content Include="Content\images\flaticon\svg\camping-tent.svg" />
+    <Content Include="Content\images\flaticon\svg\camping-tent2.svg" />
     <Content Include="Content\images\flaticon\svg\forest.svg" />
     <Content Include="Content\images\flaticon\svg\pawprint.svg" />
     <Content Include="Content\images\flaticon\svg\search.svg" />

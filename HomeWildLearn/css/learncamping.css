@@ -177,7 +177,7 @@ body {
     transition: all .2s ease-out;
 }
 
-.open {
+.open2 {
     width: 250px;
 }
 
@@ -237,3 +237,6 @@ img, figure {
     max-width: 100%;
 }
 
+li.show{
+    display:inline-block !important;
+}
