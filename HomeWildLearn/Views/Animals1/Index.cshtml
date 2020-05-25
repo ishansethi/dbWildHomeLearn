@@ -21,6 +21,8 @@
 
     .card-title {
         text-align: center;
+        font-size: 2rem;
+        font-family: "Indie Flower", cursive !important;
     }
 
     .card-shadow {
@@ -64,7 +66,6 @@
         bottom: 0px;
         width: 100%;
         z-index: -10;
-        
     }
 
     .ct-btn-scroll {
@@ -94,7 +95,8 @@
                     <span class=" h2 text-red" style="font-family: 'Caveat Brush', cursive;">Welcome To Wild-HomeLearn</span>
                     <h1 class="mb-3 font-weight-bold text-teal" style="font-family: 'Caveat Brush', cursive;">Lets Explore..</h1>
                 </div>
-                <a class="ct-btn-scroll ct-js-btn-scroll" href="#sec1"><img alt="Arrow Down Icon" src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"  ></a>            </div>
+                <a class="ct-btn-scroll ct-js-btn-scroll" href="#sec1"><img alt="Arrow Down Icon" src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"></a>
+            </div>
         </div>
     </div>
 </div>
@@ -150,19 +152,19 @@
                     </div>
                     <div class="card card-shadow text-center col-md-3 mb-4" data-class="@Html.DisplayFor(modelItem => item.animal_class)">
                         <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.animal_explore_image)" alt="Card image cap" style="width:215px; height:144px;">                        <div class="card-body">
-    <h4 class="card-title">@Html.DisplayFor(modelItem => item.animal_name)</h4>
-    <p class="card-text animal-type">I am a @Html.DisplayFor(modelItem => item.animal_class)</p>
-    <div class="dropdown-divider"></div>
-    <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+                            <h4 class="card-title text-dark">@Html.DisplayFor(modelItem => item.animal_name)</h4>
+                            <p class="card-text animal-type">I am a @Html.DisplayFor(modelItem => item.animal_class)</p>
+                            <div class="dropdown-divider"></div>
+                            <i class="fa fa-hand-o-down" aria-hidden="true"></i>
 
-    <p class="card-text">
-        <small class="text-muted"></small>
-    </p>
-    <a href="#">
-        @Html.ActionLink("About me!", "Details", "wildlife_details", new { id = item.animal_id }, new { @class = "btn btn-primary btn-space btn-sm" })
+                            <p class="card-text">
+                                <small class="text-muted"></small>
+                            </p>
+                            <a href="#">
+                                @Html.ActionLink("About me!", "Details", "wildlife_details", new { id = item.animal_id }, new { @class = "btn btn-primary btn-space btn-sm" })
 
-    </a>
-</div>
+                            </a>
+                        </div>
                     </div>
 
                 }
@@ -171,7 +173,7 @@
                     <div class="card card-shadow text-center col-md-3 mb-4" data-class="@Html.DisplayFor(modelItem => item.animal_class)" style="width: 18rem;">
                         <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.animal_explore_image)" alt="Card image cap" style="width:215px; height:144px;">
                         <div class="card-body">
-                            <h4 class="card-title">@Html.DisplayFor(modelItem => item.animal_name)</h4>
+                            <h4 class="card-title text-dark">@Html.DisplayFor(modelItem => item.animal_name)</h4>
                             <p class="card-text animal-type">I am a @Html.DisplayFor(modelItem => item.animal_class)</p>
                             <div class="dropdown-divider"></div>
                             <i class="fa fa-hand-o-down" aria-hidden="true"></i>

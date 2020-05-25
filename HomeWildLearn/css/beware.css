@@ -93,6 +93,7 @@
     background: #f1f1f1;
     color: #434343;
     text-align: center;
+    
 }
 
 .inner {
@@ -120,6 +121,7 @@
 .testimonial {
     background: #fff;
     padding: 30px;
+    height: 65vh;
 }
 
     .testimonial img {
@@ -134,4 +136,3 @@
     color: #66ab04c;
     margin-bottom: 20px;
 }
-
