@@ -2,7 +2,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     //Layout = null;
 }
-    <meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width" />
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 <link href="~/css/newquiz.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -487,42 +487,45 @@
     });
 </script>
 <div class="ftco-blocks-cover-1">
-<div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('../Content/images/boys.jpg'); ">
-    <div class="container">
-        <div class="row align-items-center ">
-            <div class="col-md-5 mt-5 pt-5">
-                <span class=" h2 text-red" style="font-family: 'Caveat Brush', cursive;">Welcome To Wild-HomeLearn</span>
-                <h1 class="mb-3 font-weight-bold text-teal" style="font-family: 'Caveat Brush', cursive;">Have fun while Learning</h1>
-                <p class="mt-5"><a href="#sec1" class="btn btn-primary py-4 btn-custom-1 text-white">Lets Begin</a></p>
+    <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('../Content/kid.jpg'); ">
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-md-5 mt-5 pt-5">
+                    <span class=" h2 text-red" style="font-family: 'Caveat Brush', cursive;">Welcome To Wild-HomeLearn</span>
+                    <h1 class="mb-3 font-weight-bold text-teal" style="font-family: 'Caveat Brush', cursive;">Quiz</h1>
+                    <p class="mt-5"><a href="#sec1" class="btn btn-primary py-4 btn-custom-1 text-white">Lets Begin</a></p>
+                </div>
+
             </div>
-
-            <a class="ct-btn-scroll ct-js-btn-scroll" href="#sec1"><img alt="Arrow Down Icon" src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"></a>
-
         </div>
     </div>
 </div>
+<div class="site-section py-5 bg-success" id="sec1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 d-flex">
+                <h1 class="text-cursive text-white m-0">
+                    Lets begin the quiz...
+                </h1>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="quizArea text-cursive">
     <div class="multipleChoiceQues">
-        <h1 class="mc_quiz">
-            Welcome to WildHomeLearn Quiz
-        </h1>
-        <audio controls>
-            <source src="~/Content/quiz.mp3.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+       
+
         <br>
-        <button class="home" onclick="location.href='@Url.Action("Index", "Home")'"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
         <div class="my-progress">
             <progress class="my-progress-bar" min="0" max="100" value="0" step="9" aria-labelledby="my-progress-completion"></progress>
             <p id="my-progress-completion" class="js-my-progress-completion sr-only" aria-live="polite">0% complete</p>
         </div>
         <div class="quizBox">
-            <div class="question"> </div>
-            <div class="answerOptions"></div>
+            <div class="question "> </div>
+            <div class="answerOptions "></div>
             <div class="buttonArea">
-                <button id="next" class="hidden">Next</button>
-                <button id="submit" class="hidden">Submit</button>
+                <button id="next" class="btn btn-primary  btn-custom-1 text-white hidden">Next</button>
+                <button id="submit" class="btn btn-primary  btn-custom-1 text-white hidden">Submit</button>
             </div>
         </div>
     </div>
@@ -549,9 +552,8 @@
             </div>
 
             <div class="resultBtns">
-                <button class="viewanswer">Answers</button>
-                <button class="home" onclick="location.href='@Url.Action("Index", "Home")'"><i class="fa fa-home" style="font-size:1em;"></i>Home</button>
-                <button class="replay"><i class="fa fa-repeat" style="font-size:1em;"></i>Replay</button>
+                <button class="btn btn-primary  btn-custom-1 text-white viewanswer">Answers</button>
+                <button class="btn btn-primary  btn-custom-1 text-white replay"><i class="fa fa-repeat" style="font-size:1em;"></i>Replay</button>
             </div>
         </div>
 
@@ -560,7 +562,7 @@
             <div class="chartBox">
                 <canvas id="myChart" width="400" height="400"></canvas>
             </div>
-            <button class="backBtn">Back</button>
+            <button class="btn btn-primary  btn-custom-1 text-white backBtn">Back</button>
         </div>
 
         <div class="resultPage3">

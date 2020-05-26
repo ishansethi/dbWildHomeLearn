@@ -1,7 +1,7 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
 body {
-    background: #dde02e;
+    background: #6f6868;
     font-family: 'Roboto Slab', serif;
     font-size: 18px;
     color: #f1f2ec;
@@ -20,7 +20,9 @@ body {
     margin-bottom: 0px;
 }
 
-
+.textquiz {
+    color:black;
+}
 
 .multipleChoiceQues {
     width: 90%;
@@ -36,6 +38,7 @@ body {
 .question {
     text-align: center;
     font-size: 0.8em;
+    color: aqua;
 }
 
 .buttonArea {

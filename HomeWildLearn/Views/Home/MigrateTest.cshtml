@@ -61,67 +61,108 @@
                 <span class="d-inline-block d-lg-none"><a href="#" class="text-black site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-black"></span></a></span>
                 <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
                     <ul class="site-menu main-menu js-clone-nav mr-auto ">
-                        <li class="active"><a href="@Url.Action("Index", "Home" )" class="nav-link"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                        <li class="active">
+                            <a href="@Url.Action("Index", "Home" )" class="nav-link">
+                                <img style="width:30px;height:30px" src="https://image.flaticon.com/icons/svg/2888/2888792.svg" class="mb-1" />
+                                Home
+                            </a>
+                        </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                                <i class="fa fa-gamepad" aria-hidden="true"></i>
+                                <img style="width:30px;height:30px" src="https://image.flaticon.com/icons/svg/2228/2228476.svg" class="mb-1" />
                                 Playfield
                             </a>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu" style="min-width: 230px">
                                 <a class="dropdown-item" href="@Url.Action("Index", "Animals1" )">
-                                    <i class="fa fa-binoculars" aria-hidden="true"></i>
-                                    Explore Wild-Animals
+                                    <img style="width:25px;height:25px" src="https://image.flaticon.com/icons/svg/1527/1527248.svg" class="mb-1" />
+                                    Explore Animals
                                 </a>
                                 @*<a class="dropdown-item" href="@Url.Action("Index", "wildlife_locations" )"><i class="fa fa-globe" aria-hidden="true"></i> Animals Around Me!</a>*@
-                                <a class="dropdown-item" href="@Url.Action("QuizTest", "Home" )"><i class="fa fa-question" aria-hidden="true"></i> Let's Test Your Knowledge</a>
-                                <a class="dropdown-item" href="@Url.Action("InterestingFacts", "Home" )"><i class="fa fa-search" aria-hidden="true"></i> Interesting Facts</a>
+                                <a class="dropdown-item" href="@Url.Action("QuizTest", "Home" )">
+                                    <img style="width:25px;height:25px" src="https://image.flaticon.com/icons/svg/1828/1828587.svg" class="mb-1" />
+                                    Test Your Knowledge
+                                </a>
+                                <a class="dropdown-item" href="@Url.Action("InterestingFacts", "Home" )">
+                                    <img style="width:25px;height:25px" src="https://image.flaticon.com/icons/svg/882/882988.svg" class="mb-1" />
+                                    Interesting Facts
+                                </a>
                                 @*<a class="dropdown-item" href="@Url.Action("WhereTo", "Home" )"><i class="fa fa-tree" aria-hidden="true"></i> Where to go now? Zoo, forest or park?</a>*@
-                                <a class="dropdown-item" href="@Url.Action("MigrateTest", "Home" )"><i class="fa fa-globe" aria-hidden="true"></i> Animal Migration</a>
+                                <a class="dropdown-item" href="@Url.Action("MigrateTest", "Home" )">
+                                    <img style="width:25px;height:25px" src="https://image.flaticon.com/icons/svg/2919/2919220.svg" class="mb-1" />
+                                    Animal Migration
+                                </a>
 
                                 <a class="dropdown-item" href="@Url.Action("LearnCamping", "Home" )">
-                                    <i class="fa fa-free-code-camp" aria-hidden="true"></i>
+                                    <img style="width:25px;height:25px" src="https://image.flaticon.com/icons/svg/1839/1839028.svg" class="mb-1" />
                                     Learn Camping
                                 </a>
-                                <a class="dropdown-item" href="@Url.Action("Index", "Blogs" )"><i class="fa fa-pencil" aria-hidden="true"></i> Wild-Kids Blogs</a>
+                                <a class="dropdown-item" href="@Url.Action("Index", "Blogs" )">
+                                    <img style="width:25px;height:25px" src="https://image.flaticon.com/icons/svg/526/526127.svg" class="mb-1" />
+                                    Wild-Kids Blogs
+                                </a>
                             </div>
                         </li>
                         @*<li>
-                            <a href="@Url.Action("Parents", "Home" )" class="nav-link">
-                                <i class="fa fa-male" aria-hidden="true"></i>
-                                Parents
-                            </a>
-                        </li>*@
+                                <a href="@Url.Action("Parents", "Home" )" class="nav-link">
+                                    <i class="fa fa-male" aria-hidden="true"></i>
+                                    Parents
+                                </a>
+                            </li>*@
                         <li>
                             <a href="@Url.Action("About", "Home" )" class="nav-link">
-                                <i class="fa fa-info" aria-hidden="true"></i>
+                                <img style="width:25px;height:25px" src="https://image.flaticon.com/icons/svg/1076/1076337.svg" class="mb-1" />
                                 About Us
                             </a>
                         </li>
                     </ul>
                 </nav>
-                @*<body onload="myFunction1()">
+                <body onload="myFunction1()">
 
-                        <iframe id="homelearn" src="" width="83" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                    </body>*@
+                    <iframe id="homelearn" src="" width="83" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </body>
             </div>
         </div>
     </header>
-    <header id="header" class="header">
+    @*<header id="header" class="header">
         <div class="header-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-container">
-                            <h1>Learn about <span id="js-rotating">Whale Migration, Penguin Migration</span></h1>
-                            <a class="btn-solid-lg page-scroll" href="#details">Begin</a>
-                        </div>
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-        </div> <!-- end of header-content -->
-    </header> <!-- end of header -->
-    <hr>
+            <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('../Content/images/mapaus.jpg')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="text-container">
+                                <h1>Learn about <span id="js-rotating">Whale Migration, Penguin Migration</span></h1>
+                                <a class="btn-solid-lg page-scroll" href="#details">Begin</a>
+                            </div>
+                        </div>  end of col 
+                    </div>  end of row 
+                </div>  end of container 
+            </div>
+        </div>  end of header-content 
+    </header>*@
+
+
+    <!-- end of header -->
+
+<div class="ftco-blocks-cover-1">
+    <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('../Content/migrate.jpg'); ">
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-md-12 mt-5 pt-5">
+                    <span class=" h2 text-red" style="font-family: 'Caveat Brush', cursive;">Welcome To Wild-HomeLearn</span>
+                    <div class="text-container">
+                        <h1>Learn about <span id="js-rotating">Whale Migration, Penguin Migration</span></h1>
+                    </div>
+                    <p class="mt-5"><a href="#sec1" class="btn btn-danger py-4 btn-custom-1 text-white">Lets Begin</a></p>
+                </div>
+                <!-- removed this button as it is not required anymore-->
+                @*<a class="ct-btn-scroll ct-js-btn-scroll" href="#sec1"><img alt="Arrow Down Icon" src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"></a>*@
+
+            </div>
+        </div>
+    </div>
+</div>
+
     <div class="site-section py-5 bg-success" id="sec1">
         <div class="container">
             <div class="row justify-content-center">
@@ -829,8 +870,12 @@
 
     </script>
     <hr />
-    <iframe width="1280" height="720" src="https://www.powtoon.com/embed/eUQtBSTOnDu/" frameborder="0"></iframe>
-
+    @*<iframe width="1280" height="720" src="https://www.powtoon.com/embed/eUQtBSTOnDu/" frameborder="0"></iframe>*@
+    <footer class="site-footer">
+        <div class="container justify-content-center align-content-center">
+            <p>&copy;  @DateTime.Now.Year - Wild-HomeLearn &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="~/MigrateJs/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
