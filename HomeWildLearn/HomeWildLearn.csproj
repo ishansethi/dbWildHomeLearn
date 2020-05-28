@@ -409,6 +409,7 @@
     <Content Include="Content\penguin.mpeg" />
     <Content Include="Content\pic1.jpg" />
     <Content Include="Content\pic2.jpg" />
+    <Content Include="Content\Preloader_3.gif" />
     <Content Include="Content\question.jpg" />
     <Content Include="Content\qui.jpg" />
     <Content Include="Content\quiz.jpg" />
@@ -700,7 +701,10 @@
     <None Include="Properties\PublishProfiles\HomeWildLearn20200419011418 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\HomeWildLearn20200511120523 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\HomeWildLearnAzure - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\HomeWildLearnTim - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\HomeWildLearnTim - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\HomeWildLearnTim - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\HomeWildLearnTim - Web Deploy1.pubxml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-migrate-3.0.0.js" />
     <Content Include="Scripts\jquery-migrate-3.0.1.min.js" />

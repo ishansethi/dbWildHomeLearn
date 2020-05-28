@@ -63,6 +63,33 @@
     img, figure {
         max-width: 100%;
     }
+
+ 
+
+        .package:hover {
+            transform: scale(0.9, 0.9);
+            box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
+        }
+
+ 
+
+
+
+    /*
+    .card {
+      margin: 30px auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 40px;
+      background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-repeat: no-repeat;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+      transition: 0.4s;
+    }
+    */
 </style>
 
 <script language="JavaScript">
@@ -146,73 +173,83 @@
         </div>
         <div class="row">
             @*<div class="col-lg-3">
+            <div class="package text-center bg-white">
+                <span class="img-wrap"><img src="~/Content/images/flaticon/svg/pawprint.svg" alt="Image" class="img-fluid"></span>
+                <h3>Animals Around Me !</h3>
+                <p class="text-cursive"> Lets check which animals are around me. Go!!</p>
+                <p>
+                    <a href="@Url.Action("Index", "wildlife_locations")" class="btn btn-primary btn-custom-1 mt-4">
+                        <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
+                        Lets Explore!!
+                    </a>
+                </p>
+            </div>
+        </div>*@
+            <a href="@Url.Action("Index", "Animals1")">
+                <div class="col-lg-4">
+
                     <div class="package text-center bg-white">
-                        <span class="img-wrap"><img src="~/Content/images/flaticon/svg/pawprint.svg" alt="Image" class="img-fluid"></span>
-                        <h3>Animals Around Me !</h3>
-                        <p class="text-cursive"> Lets check which animals are around me. Go!!</p>
+                        <span class="img-wrap"><img src="~/Content/images/flaticon/svg/australia.svg" alt="Image" class="img-fluid"></span>
+                        <h3>Explore Wild-Animals</h3>
+                        <p class="text-cursive">Explore more about wild animals. Search on!</p>
                         <p>
-                            <a href="@Url.Action("Index", "wildlife_locations")" class="btn btn-primary btn-custom-1 mt-4">
+                            <a href="@Url.Action("Index", "Animals1")" class="btn btn-primary btn-custom-1 mt-4">
                                 <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
                                 Lets Explore!!
                             </a>
                         </p>
                     </div>
-                </div>*@
-            <div class="col-lg-4">
-                <div class="package text-center bg-white">
-                    <span class="img-wrap"><img src="~/Content/images/flaticon/svg/australia.svg" alt="Image" class="img-fluid"></span>
-                    <h3>Explore Wild-Animals</h3>
-                    <p class="text-cursive">Explore more about wild animals. Search on!</p>
-                    <p>
-                        <a href="@Url.Action("Index", "Animals1")" class="btn btn-primary btn-custom-1 mt-4">
-                            <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
-                            Lets Explore!!
-                        </a>
-                    </p>
+
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="package text-center bg-white">
-                    <span class="img-wrap"><img src="~/Content/images/flaticon/svg/test.svg" alt="Image" class="img-fluid"></span>
-                    <h3>Check your knowledge </h3>
-                    <p class="text-cursive">Yayy...its quiz time. Just click on lets explore..</p>
-                    <p>
-                        <a href="@Url.Action("QuizTest")" class="btn btn-primary btn-custom-1 mt-4">
-                            <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
-                            Quiz Time
-                        </a>
-                    </p>
+            </a>
+            <a href="@Url.Action("QuizTest")">
+                <div class="col-lg-4">
+                    <div class="package text-center bg-white">
+                        <span class="img-wrap"><img src="~/Content/images/flaticon/svg/test.svg" alt="Image" class="img-fluid"></span>
+                        <h3>Check your knowledge </h3>
+                        <p class="text-cursive">Yayy...its quiz time. Just click on lets explore..</p>
+                        <p>
+                            <a href="@Url.Action("QuizTest")" class="btn btn-primary btn-custom-1 mt-4">
+                                <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
+                                Quiz Time
+                            </a>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="package text-center bg-white">
-                    <span class="img-wrap"><img src="~/Content/images/flaticon/svg/birds.svg" alt="Image" class="img-fluid"></span>
-                    <h3>How animals Migrate?</h3>
-                    <p class="text-cursive">Wondering how animals migrate? Lets Check!</p>
-                    <p>
-                        <a href="@Url.Action("MigrateTest")" class="btn btn-primary btn-custom-1 mt-4">
-                            <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
-                            Lets Explore!!
-                        </a>
-                    </p>
+            </a>
+            <a href="@Url.Action("MigrateTest")">
+                <div class="col-lg-4">
+                    <div class="package text-center bg-white">
+                        <span class="img-wrap"><img src="~/Content/images/flaticon/svg/birds.svg" alt="Image" class="img-fluid"></span>
+                        <h3>How animals Migrate?</h3>
+                        <p class="text-cursive">Wondering how animals migrate? Lets Check!</p>
+                        <p>
+                            <a href="@Url.Action("MigrateTest")" class="btn btn-primary btn-custom-1 mt-4">
+                                <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
+                                Lets Explore!!
+                            </a>
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
         <hr>
         <div class="row">
-            <div class="col-lg-4">
-                <div class="package text-center bg-white">
-                    <span class="img-wrap"><img src="~/Content/images/flaticon/svg/search.svg" alt="Image" class="img-fluid"></span>
-                    <h3>Interesting Facts</h3>
-                    <p class="text-cursive"> Learn some cool facts about wildlife with the awareness.</p>
-                    <p>
-                        <a href="@Url.Action("InterestingFacts")" class="btn btn-primary btn-custom-1 mt-4">
-                            <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
-                            Lets Learn!!
-                        </a>
-                    </p>
+            <a href="@Url.Action("InterestingFacts")">
+                <div class="col-lg-4">
+                    <div class="package text-center bg-white">
+                        <span class="img-wrap"><img src="~/Content/images/flaticon/svg/search.svg" alt="Image" class="img-fluid"></span>
+                        <h3>Interesting Facts</h3>
+                        <p class="text-cursive"> Learn some cool facts about wildlife with the awareness.</p>
+                        <p>
+                            <a href="@Url.Action("InterestingFacts")" class="btn btn-primary btn-custom-1 mt-4">
+                                <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
+                                Lets Learn!!
+                            </a>
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
             @*<div class="col-lg-3">
                     <div class="package text-center bg-white">
                         <span class="img-wrap"><img src="~/Content/images/flaticon/svg/forest.svg" alt="Image" class="img-fluid"></span>
@@ -226,6 +263,7 @@
                         </p>
                     </div>
                 </div>*@
+        <a href="@Url.Action("LearnCamping")">
             <div class="col-lg-4">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/camping-tent.svg" alt="Image" class="img-fluid"></span>
@@ -239,6 +277,8 @@
                     </p>
                 </div>
             </div>
+        </a>
+        <a href="@Url.Action("Index", "Blogs")">
             <div class="col-lg-4">
                 <div class="package text-center bg-white">
                     <span class="img-wrap"><img src="~/Content/images/flaticon/svg/blogging.svg" alt="Image" class="img-fluid"></span>
@@ -252,11 +292,12 @@
                     </p>
                 </div>
             </div>
+        </a>
         </div>
     </div>
 </div>
 
-<div class="site-section bg-info">
+@*<div class="site-section bg-info">
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 text-center">
@@ -300,14 +341,14 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@
 
 
 
 
 
 
-<div class="site-section bg-light">
+@*<div class="site-section bg-light">
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 text-center">
@@ -345,7 +386,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@
 
 
 
