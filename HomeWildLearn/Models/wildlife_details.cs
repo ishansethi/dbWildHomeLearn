@@ -45,5 +45,7 @@ namespace HomeWildLearn.Models
         public string Animal_Image_5 { get; set; }
 
         public string Animal_Location_details { get; set; }
+
+        public string Animal_Page { get; set; }
     }
 }

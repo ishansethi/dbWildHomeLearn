@@ -697,6 +697,11 @@
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />
     <Content Include="webfonts\fa-solid-900.svg" />
+    <Content Include="Content\kangaroo.pdf" />
+    <Content Include="Content\koala.pdf" />
+    <Content Include="Content\penguin.pdf" />
+    <Content Include="Content\quokka.pdf" />
+    <Content Include="Content\whale.pdf" />
     <None Include="Properties\PublishProfiles\HomeWildLearn - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\HomeWildLearn20200419011418 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\HomeWildLearn20200511120523 - Web Deploy.pubxml" />
