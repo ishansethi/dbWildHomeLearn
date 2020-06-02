@@ -21,64 +21,64 @@
 </div>
 
 <style>
-        .cards-list {
-            z-index: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
+    .cards-list {
+        z-index: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 
-        .card {
-            margin: 30px auto;
-            width: 300px;
-            height: 300px;
+    .card {
+        margin: 30px auto;
+        width: 300px;
+        height: 300px;
+        border-radius: 40px;
+        box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+        .card .card_image {
+            width: inherit;
+            height: inherit;
             border-radius: 40px;
-            box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-            cursor: pointer;
-            transition: 0.4s;
         }
 
-            .card .card_image {
+            .card .card_image img {
                 width: inherit;
                 height: inherit;
                 border-radius: 40px;
+                object-fit: cover;
             }
 
-                .card .card_image img {
-                    width: inherit;
-                    height: inherit;
-                    border-radius: 40px;
-                    object-fit: cover;
-                }
-
-            .card .card_title {
-                text-align: center;
-                border-radius: 0px 0px 40px 40px;
-                font-family: sans-serif;
-                font-weight: bold;
-                font-size: 30px;
-                margin-top: -80px;
-                height: 40px;
-            }
-
-            .card:hover {
-                transform: scale(0.9, 0.9);
-                box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
-            }
-
-        .title-white {
-            color: white;
+        .card .card_title {
+            text-align: center;
+            border-radius: 0px 0px 40px 40px;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -80px;
+            height: 40px;
         }
 
-        .title-black {
-            color: black;
+        .card:hover {
+            transform: scale(0.9, 0.9);
+            box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
         }
 
+    .title-white {
+        color: white;
+    }
+
+    .title-black {
+        color: black;
+    }
 
 
 
-        /*
+
+    /*
     .card {
       margin: 30px auto;
       width: 300px;
@@ -96,7 +96,7 @@
 </style>
 
 <div class="cards-list">
-    <a href="" class="card 1" >
+    <a href="" class="card 1">
         <div class="card_image"> <img src="https://media.giphy.com/media/AtJPYF7AaPRTi/giphy.gif" /> </div>
         <div class="card_title title-white">
             <p>Whales</p>
@@ -104,13 +104,13 @@
     </a>
 
     <a href="" class="card 2">
-            <div class="card_image">
-                <img src="https://media.giphy.com/media/zHokhPIy6lwas/giphy.gif" />
-            </div>
-            <div class="card_title title-white">
-                <p>Penguins</p>
-            </div>
-        </a>
+        <div class="card_image">
+            <img src="https://media.giphy.com/media/zHokhPIy6lwas/giphy.gif" />
+        </div>
+        <div class="card_title title-white">
+            <p>Penguins</p>
+        </div>
+    </a>
 </div>
 <hr>
 <div class="site-section py-5 bg-success" id="sec1">
@@ -132,3 +132,53 @@
         </div>
     </div>
 </div>
+
+
+<div class="tabs" id="sec4">
+    <div class="area-1">
+        <div class="tabs-container">
+            <h2>Lets learn more about Penguin Migration...</h2>
+            <!-- Tabs Links -->
+            <ul class="nav nav-tabs" id="ariaTabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-th"></i> Why ?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-th"></i> How ?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false"><i class="fas fa-th"></i>Facts</a>
+                </li>
+            </ul>
+            <!-- end of tabs links -->
+            <!-- Tabs Content -->
+            <div class="tab-content" id="ariaTabsContent">
+
+                <!-- Tab -->
+                <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                    <h4>Why do Penguins Migrate ?</h4>
+                    <p>These majestic penguins travel every year to reach preprogrammed, inland spots for nesting. Migration, such as this penguin ritual, allows animals to move from place to place to meet survival needs. Like the migration of birds who fly south for the winter, Emperor penguins migrate every year.</p>
+
+
+
+                </div> <!-- end of tab-pane -->
+                <!-- end of tab -->
+                <!-- Tab -->
+                <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                    <h4>How Penguins Migrate ?</h4>
+                    <p>The emperor penguins travel 60-100 miles inland to their designated  breeding sites. All of the colonies go to the same place and arrive around the same time. They start in the beginning of March and the migration should  end by the end of March. They always take a different path because the ice shifts and places new obstacles in their way. </p>
+
+                </div> <!-- end of tab-pane -->
+                <!-- end of tab -->
+                <!-- Tab -->
+                <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+                    <p><strong>Some amazing facts - Penguins spend around half their time in water and the other half on land </strong></p>
+                </div> <!-- end of tab-pane -->
+                <!-- end of tab -->
+
+            </div> <!-- end of tab-content -->
+            <!-- end of tabs content -->
+
+        </div> <!-- end of tabs-container -->
+    </div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2"></div> <!-- end of area-2 -->
+</div> 

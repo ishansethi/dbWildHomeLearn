@@ -978,6 +978,11 @@ input[type='checkbox'] {
     background: url('https://media.giphy.com/media/AtJPYF7AaPRTi/giphy.gif') center center no-repeat;
     background-size: cover;
 }
+.accordion .area-3 {
+	height: 15rem;
+	background: url('https://media.giphy.com/media/zHokhPIy6lwas/giphy.gif') center center no-repeat;
+	background-size: cover;
+}
 
 .accordion .accordion-container {
 	max-width: 90%;
@@ -1168,7 +1173,11 @@ input[type='checkbox'] {
     background: url('https://media.giphy.com/media/zHokhPIy6lwas/giphy.gif') center center no-repeat;
     background-size: cover;
 }
-
+.tabs .area-4 {
+	height: 15rem;
+	background: url('https://media.giphy.com/media/zHokhPIy6lwas/giphy.gif') center center no-repeat;
+	background-size: cover;
+}
 
 /****************************/
 /*     10. Testimonials     */
@@ -2134,6 +2143,7 @@ a:hover.back-to-top {
 		height: 100%;
 		display: inline-block;
 	}
+		
 	
 	.accordion .area-2 {
 		width: 50%;
@@ -2141,6 +2151,17 @@ a:hover.back-to-top {
 		display: inline-block;
 		vertical-align: top;
 	}
+		.accordion .area-3 {
+			width: 50%;
+			height: 100%;
+			display: inline-block;
+		}
+		.accordion .area-4 {
+			width: 50%;
+			height: 100%;
+			display: inline-block;
+			vertical-align: top;
+		}
 	
 	.accordion .accordion-container {
 		max-width: 88%;
@@ -2171,6 +2192,12 @@ a:hover.back-to-top {
 		height: 100%;
 		display: inline-block;
 	}
+
+		.tabs .area-4 {
+			width: 50%;
+			height: 100%;
+			display: inline-block;
+		}
 
 	.tabs .tabs-container {
 		max-width: 88%;
